@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Write the syntax if (simple if) and Write a program to demonstrate if (user input)
+        const a = 5;
+        const b = 10;
+        if(b%a == 0){
+            document.write("Multiple of 5" +"<br/>");
+        }
+
+        //2. Write the syntax for if…else and Write a program to demonstrate if….else (User inputs)
+        const c = Number(prompt("Enter a value of c:"));
+        const d = Number(prompt("Enter a value of d:"));
+        if (c>=d) {
+        document.write ("c is a bigger number");
+        }
+        else{
+        document.write("d is a bigger number" +"<br/>");
+        }
+
+        // 3. Write a program for greatest of Two Numbers using Ternary Operation
+        let x = prompt("enter a: ");
+        let y = prompt("enter b:");
+        x > y ? document.write("a is bigger than b", x):document.write("b is Big:",y)
+
+        //4. Write the syntax for Nested if and Write a program to demonstrate Nested if
+        let age = prompt('age: ');
+        if (age > 0) {
+            document.write("Happy birthday!");
+            if (age <18 && age >=13) {
+                document.write("teenage!");
+            }
+            if (age > 18) {
+                document.write("adult");
+            } 
+        }
+
+        //5. Write the syntax for elif ladder and Write a program to demonstrate elif Ladder
+        let age1 = prompt("age: ");
+        if (age1 < 0) {
+            document.write("not born");
+        } elif (age1 > 0) {
+            document.write("you born");
+        } elif (age1 > 18) {
+            document.write("adult u can apply license");
+        } else {
+            ddocument.write("sorry! not eligible..");
+        }
+
+       //6.Eligible for Vote or not
+        const e = Number(prompt("Enter a age:"));
+        if (e >= 18){
+            document.write("You are eligible to vote");
+        }
+        else{
+            document.write("You are not eligible to vote" + "<br/>");
+        }
+
+        //7.even or not
+        const f = Number(prompt("Enter a number:"));
+        if (f % 2 == 0){
+            document.write("Given number is even");
+        }
+        else{
+            document.write("Given number is odd"+ "<br/>");
+        }
+
+        //8.divisible by 7 0r not
+        const g = Number(prompt("Enter a number:"));
+        if (g % 7 == 0){
+            document.write("Given number is divisible by 7");
+        }
+        else{
+            document.write("Given number is not divisible by 7"+ "<br/>");
+        }
+
+        // 9. Multiple of 5
+        const h = Number(prompt("Enter a number:"));
+        if(h % 5 == 0){
+            document.write("Welcome to JavaScript Programming");
+        }else{
+            document.write("Bye");
+        }
+
+        // 10. Write a program to display the last digit of a given number
+        let num = prompt("enter a number: ");
+        document.write(num %10);
+
+        // 11. Write a program to check whether the last digit of a number (entered by user) is divisible by 3 or not?
+        let num = prompt("enter a number: ");
+        lastDigit = num % 10;
+        if (lastDigit % 3 == 0) {
+            document.write("divisible by 3");
+        } else {
+            document.write("not divisible by 3");
+        }
+
+        //12.Positive negative or zero
+        const h = Number(prompt("Enter a value of h:"));
+        if(h>=0){
+            if(h>0){
+                document.write("Positive number");
+            }else{
+                document.write("Zero");
+            }
+        }else{
+            document.write("Negative number");
+        }
+        //13.even or not
+        const f = Number(prompt("Enter a number:"));
+        if (f % 2 == 0){
+            document.write("Given number is even");
+        }
+        else{
+            document.write("Given number is odd"+ "<br/>");
+        }
+            
+        //14. Write a program to check whether the given year is leap year or not?
+        let year = prompt("enter year: ");
+        if (year % 4 == 0) {
+            document.write("leap year");
+        } else {
+            document.write("it is not aleap year");
+        }
+
+        //15. Create a page to check the given number is even or odd using prompt
+        const number = parseInt(prompt("Enter a number:"));
+        if (number % 2 === 0) {
+            document.write(number + " is even.");
+        } else {
+            document.write(number + " is odd.");
+        }
+
+        //16. Create a page to check the person eligible to vote or not using prompt box
+        const age = parseInt(prompt("Enter your age:"));
+        if (age >= 18) {
+            document.write("You are eligible to vote.");
+        } else {
+            document.write("You are not eligible to vote.");
+        }
+
+        //17. Create a page to print factorial of given number using prompt box
+        const number = parseInt(prompt("Enter a number:"));
+        let factorial = 1;
+        for (let i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        document.write("The factorial of " + number + " is: " + factorial);
+
+        //18. Create a page to check the given number is armstrong or not using prompt box?
+        const number = parseInt(prompt("Enter a number:"));
+        let sum = 0;
+        let temp = number;
+        while (temp > 0) {
+            let digit = temp % 10;
+            sum += digit ** 3;
+            temp = Math.floor(temp / 10);
+        }
+        if (number === sum) {
+            document.write(number + " is an Armstrong number.");
+        } else {
+            document.write(number + " is not an Armstrong number.");
+        }
+
+        //19. Develop a Javascript Program to print square of the given 10 Numbers?
+        const numbers = [];
+        for (let i = 1; i <= 10; i++) {
+            const number = parseFloat(prompt("Enter number " + i + ":"));
+            numbers.push(number);
+        }
+        document.write("The square of the numbers is:");
+        for (let i = 0; i < numbers.length; i++) {
+            const square = numbers[i] ** 2;
+            document.write(numbers[i] + " squared is " + square);
+        }
+
+        //20. Develop a Javascript Program to print addition of two numbers using functions?
+        function promptNumber() {
+        return parseFloat(prompt("Enter a number:"));
+        }
+        function addNumbers(num1, num2) {
+        return num1 + num2;
+        }
+        const number1 = promptNumber();
+        const number2 = promptNumber();
+        const sum = addNumbers(number1, number2);
+        document.write("The sum of " + number1 + " and " + number2 + " is: " + sum);
+
+        //21. Develop a Javascript Program to print reverse of a given number?
+        function reverseNumber(number) {
+        let reverse = 0;
+        while (number !== 0) {
+            const digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number = Math.floor(number / 10);
+        }
+        return reverse;
+        }
+        const number = parseInt(prompt("Enter a number:"));
+        const reversedNumber = reverseNumber(number);
+        document.write("The reverse of " + number + " is: " + reversedNumber);
+
+        //22. Develop a Javascript Program to check whether the given number is palindrome or not ?
+        function isPalindrome(number) {
+        const originalNumber = number;
+        let reverse = 0;
+        while (number !== 0) {
+            const digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number = Math.floor(number / 10);
+        }
+        if (originalNumber === reverse) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+        const number = parseInt(prompt("Enter a number:"));
+        if (isPalindrome(number)) {
+            document.write(number + " is a palindrome.");
+        } else {
+            document.write(number + " is not a palindrome.");
+        }
+
+        //23. Write a Javascript program to print even numbers from 1 to 100?
+        for (let number = 1; number <= 100; number++) {
+            if (number % 2 === 0) {
+                document.write(number);
+            }
+        }
+
+        //24. Write a Javascript program to print odd numbers from 1 to 100?
+        for (let number = 1; number <= 100; number++) {
+            if (number % 2 != 0) {
+                document.write(number);
+            }
+        }
+
+        //25. Demonstrate Types of Looping Statements in JavaScript with example programs?
+            /*
+                1. for loop
+                2. while loop
+                3. for each
+                4. for in
+                5. do while loop
+            */
+        // for loop
+        for (let i=0; i<2; i++) {
+            document.write(i);
+        }
+        // while loop
+        while (i < 0) {
+            document.write(i);
+            i++;
+        }
+        // for each
+        array.forEach(element => {
+            document.write(element);
+        });
+        // for in
+        for (const key in object) {
+            if (Object.hasOwnProperty.call(object, key)) {
+                const element = object[key];
+                
+            }
+        }
+        // do while loop
+        do {
+            document.write(i);
+        } while (condition);
+
+        //26. Write a JavaScript program to print Sum of individual digits between 100 to 1000 using while Loop
+        let sum = 0;
+        let number = 100;
+        while (number < 1000) {
+            let currentNumber = number;
+            while (currentNumber > 0) {
+                let digit = currentNumber % 10;
+                sum += digit;
+                currentNumber = Math.floor(currentNumber / 10);
+            }
+            number++;
+        }
+        document.write(sum);
+
+        //27. Write a JavaScript program to check whether the given number is Armstrong or not  using do..while Loop?
+        let sum = 0;
+        let tempNumber = 153;
+        const numberOfDigits = number.toString().length;
+        do {
+            let digit = tempNumber % 10;
+            sum += Math.pow(digit, numberOfDigits);
+            tempNumber = Math.floor(tempNumber / 10);
+        } while (tempNumber > 0);
+        document.write(sum === tempNumber);
+
+        //28. Write a JavaScript program to check whether the given number is Palindrome or not  using do..while Loop?
+        let num = 12321;
+        let reversedNumber = 0;
+        let remainder;
+        do {
+            remainder = num % 10;
+            reversedNumber = (num / 10);
+        } while (num > 0);
+        if (num === reversedNumber) {
+            document.write(`${num} is a palindrome.`);
+        } else {
+            document.write(`${num} is not a palindrome.`);
+        }
+
+        //29. Write a JavaScript program to check whether the given number is Perfect Number or not  using while Loop?
+        let num = 28;
+        let sum = 0;
+        let curr = 1;
+        while (curr <= num / 2) {
+            if (num % curr === 0) {
+                sum += curr;
+            }
+            curr++;
+        }
+        if (sum === num && num > 0) {
+            console.log(`${num} is a perfect number.`);
+        } else {
+            console.log(`${num} is not a perfect number.`);
+        }
+
+        //30. Write a JavaScript program to check whether the given number is Strong Number or not  using do..while Loop?
+        let num = 145;
+        let orig = num;
+        let sum = 0;
+        do {
+            let curr = num % 10;
+            let fact = 1;
+            // Calculate factorial of currentDigit
+            for (let i = 1; i <= curr; i++) {
+                fact *= i;
+            }
+            // Add factorial to sumOfFactorials
+            sum += fact;
+            // Remove the last digit from numberToCheck
+            num = Math.floor(num / 10);
+        } while (num > 0);
+        if (sum === orig) {
+            document.write(`${orig} is a Strong Number.`);
+        } else {
+            document.write(`${orig} is not a Strong Number.`);
+        }
+
+        //31. Write a JavaScript program to print reverse of a given number using while Loop?
+        let num = 12345;
+        let rev = 0;
+        while (num > 0) {
+            let lastdigi = num % 10;
+            rev = (rev * 10) + lastdigi;
+            num = Math.floor(num / 10);
+        }
+        document.write(`The reversed number is: ${rev}`);
+
+        //32. Write a JavaScript program to print Factorial of a given number using while Loop?
+        let number = 5; // Replace with the desired number
+        let factorial = 1;
+        let i = 1;
+        while (i <= number) {
+            factorial *= i;
+            i++;
+        }
+        document.write(factorial);
+
+
+        //33. Write a JavaScript program to check the given number is prime or not using while Loop?
+        let num = 17; // Replace with the number you want to check
+        let isPrime = true;
+        let i = 2;
+        while (i < num) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+            
+            i++;
+        }
+        if (isPrime && num > 1) {
+            document.write(`${num} is a prime number.`);
+        } else {
+            document.write(`${num} is not a prime number.`);
+        }
+
+        //34. Fibonacci Sequence for Given number?
+        let num = 10; // Replace with the desired number
+        let fibo = [];
+        fibo[0] = 0;
+        fibo[1] = 1;
+        let i = 2;
+        while (fibo[i - 1] <= num) {
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+            i++;
+        }
+        document.write('Fibonacci sequence:');
+        for (let j = 0; j < i - 1; j++) {
+            document.write(fibo[j]);
+        }
+
+        //35. Multiplication Tables from start to end range?
+        let start = 2; // Replace with the starting number
+        let end = 5; // Replace with the ending number
+        for (let i = start; i <= end; i++) {
+            document.write(`Multiplication table for ${i}:`);
+        for (let j = 1; j <= 10; j++) {
+            let result = i * j;
+            document.write(`${i} x ${j} = ${result}`);
+        }
+        document.write('-------------------------');
+        }
+
+        //36. write a JavaScript program to print Armstrong Numbers between range using for Loop?
+        let start = 100; // Replace with the starting number
+        let end = 1000; // Replace with the ending number
+        console.log(`Armstrong Numbers between ${start} and ${end}:`);
+        for (let num = start; num <= end; num++) {
+            let sum = 0;
+            let curr = num;
+            let digitCount = String(num).length;
+            while (curr > 0) {
+                let digit = curr % 10;
+                sum += Math.pow(digit, digitCount);
+                curr = Math.floor(curr / 10);
+            }
+            if (sum === num) {
+                console.log(num);
+            }
+        }
+
+        //37. Demonstrate Control Statements: break, continue  with Examples?
+        //break
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                break;
+            }
+            console.log(i);
+        }
+        //continue
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                continue;
+            }
+            console.log(i);
+        }
+
+        //38. Create an JavaScript application to print the following format?
+        let rows = 6; // Replace with the number of rows
+        for (let i = 1; i <= rows; i++) {
+            let pattern = '';
+            for (let j = 1; j <= i; j++) {
+                pattern += j.toString() + ' ';
+            }
+            document.write(pattern);
+        }
+
+        //39. Create an JavaScript application to print the following format? 
+        let rows = 5; // Replace with the number of rows
+        for (let i = rows; i >= 1; i--) {
+            let pattern = '';
+            for (let j = 1; j <= i; j++) {
+                pattern += j.toString() + ' ';
+            }
+            document.write(pattern);
+        }
+
+        //40. Write a JavaScript application to display the following format?
+        let rows = 2; // Replace with the number of rows
+        for (let i = 1; i <= rows; i++) {
+            let pattern = '';
+            for (let j = 1; j <= rows - i; j++) {
+                pattern += ' ';
+            }
+            for (let k = 1; k <= i; k++) {
+                pattern += '* ';
+            }
+            document.write(pattern);
+        }
+
+        //41. Program to find sum of n natural numbers and Factorial of number using do..while loop?
+        let n = 10; // Replace with your desired number
+        let sum = 0;
+        let factorial = 1;
+        let count = 1;
+        do {
+            // Calculate the sum
+            sum += count;
+            // Calculate the factorial
+            factorial *= count;
+            count++;
+        } while (count <= n);
+        document.write("Sum:", sum);
+        document.write("Factorial:", factorial);
+
+        //42. Program to demonstrate for-in looping statement?
+        let person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        for (let property in person) {
+            document.write(property + ": " + person[property]);
+        }
+
+        //43. Define a function, Demonstrate Types of functions with examples?
+        /*
+        2 types of functions
+        1. user defined function
+        2. built-in function
+        */
+        function add(a, b) { // user defined function
+            return a + b;
+        }
+        let a = parseInt(b); // built-in function
+
+        //44. Write a program to demonstrate typeconversions using built-in functions?let str = '10';
+        let num = Number(str); 
+        document.write(typeof num); 
+        let bool = Boolean(num); 
+        document.write(typeof bool); 
+        let str2 = String(bool); 
+        document.write(typeof str2);
+
+        //45. Write a user defined function to add 2 numbers and display their sum
+        function add(a, b) {
+            document.write(a+b);
+        }
+        add(2, 3); // calling function
+
+        //46. Write a program to demonstrate callbyvalue
+        function calByVal(num) {
+            num = 10;
+            document.write('Inside function:', num);
+        }
+        let a = 5;
+        document.write('Before function:', a);
+        changeValue(a);
+        document.write('After function:', a);
+
+        //47. Write a program to demonstrate callbyreference?
+        function calByRef(obj) {
+            obj.name = 'Jane';
+            document.write('Inside function:', obj);
+        }
+        let person = { name: 'John' };
+        document.write('Before function:', person);
+        changeValue(person);
+        document.write('After function:', person);
+
+        //48. Write a program using a user defined function that displays sum of first n natural numbers, where n is passed as an argument.
+        function sumOfnNum(n) {
+            document.write((n * (n + 1)) / 2);
+        }
+        sumOfnNum(2); // calling the function
+
+        //49. Write a program using user defined function that accepts an integer and increments the value by 5. Also display the id of argument (before function call), id of parameter before increment and after increment
+        function incrementBy5(num) {
+            document.write('Type of argument:', typeof num);
+            document.write('ID of parameter before increment:', num);
+            num += 5;
+            document.write('ID of parameter after increment:', num);
+        }
+        let value = 10;
+        document.write('ID of argument (before function call):', value);
+        incrementBy5(value);
+
+        //50. Write a program using a user defined function calcFact() to calculate and display the factorial of a number num passed as an argument.
+        function calcFact(num) {
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.write(fact);
+        }
+        const num = 5;
+        calcFact(num);
+
+        //51. Write a program using a user defined function that accepts the first name and lastname as arguments, concatenate them to get full name and displays the output as: Hello full name For example, if first name is Gyan and lastname is Vardhan, the output should be: Hello Gyan Vardhan
+        function greetFullName(frstName, lstName) {
+            const fullName = frstName + ' ' + lstName;
+            document.write(`Hello ${fullName}`);
+        }
+        greetFullName('Gyan', 'Vardhan');
+
+        //52. Write a program using user defined function that accepts length and breadth of a rectangle and returns the area and perimeter of the rectangle.
+        function calcRecProps(len, bre) {
+            const area = len * bre;
+            const peri = 2 * (len + bre);
+            return [area, peri];
+        }
+        const [area, peri] = calcRecProps(5, 3);
+        document.write(`area: ${area}`);
+        document.write(`perimeter: ${peri}`);
+
+        //53. Write a program using user defined function calcPow() that accepts base and exponent as arguments and returns the value Baseexponent where Base and exponent are integers
+        function calPow(base, exp) {
+            document.write(Math.pow(base, exp));
+        }
+        calPow(5, 4);
+
+        /*54. Write a program that simulates a traffic light . The program should consist of the
+        following:
+        1. A user defined function trafficLight( ) that accepts input from the user, displays an
+        error message if the user enters anything other than RED, YELLOW, and GREEN.
+        Function light() is called and following is displayed depending upon return
+        value from light().
+        a) “STOP, your life is precious” if the value returned by light() is 0.
+        b) “Please WAIT, till the light is Green “ if the value returned by light() is 1
+        c) “GO! Thank you for being patient” if the value returned by light() is 2.
+        2. A user defined function light() that accepts a string as input and returns 0 when the
+        input is RED, 1 when the input is YELLOW and 2 when the input is GREEN. The input
+        should be passed as an argument.
+        3. Display “ SPEED THRILLS BUT KILLS” after the function trafficLight( ) is
+        executed */
+        function trafficLight() {
+            const userInput = prompt('Enter the color of the traffic light (RED, YELLOW, or GREEN):');
+            const lightValue = light(userInput.toUpperCase());
+
+            if (lightValue === 0) {
+                document.write('STOP, your life is precious');
+            } else if (lightValue === 1) {
+                document.write('Please WAIT, till the light is Green');
+            } else if (lightValue === 2) {
+                document.write('GO! Thank you for being patient');
+            } else {
+                alert('Invalid input. Please enter only RED, YELLOW, or GREEN.');
+            }
+        }
+        function light(color) {
+            if (color === 'RED') {
+                return 0;
+            } else if (color === 'YELLOW') {
+                return 1;
+            } else if (color === 'GREEN') {
+                return 2;
+            } else {
+                return -1;
+            }
+        }
+        trafficLight();
+        document.write('SPEED THRILLS BUT KILLS');
+
+        //55. Program to access any variable outside the function
+        let outer = 'Hello, world!';
+        function accessOuterVar() {
+        document.write(outer);
+        }
+        accessOuterVar();
+
+        //56. Program to print Fibanocci series using recursion
+        function fib(n) {
+            if (n <= 1) {
+                return n;
+            } else {
+                return fib(n - 1) + fib(n - 2);
+            }
+        }
+        function printFib(count) {
+            for (let i = 0; i < count; i++) {
+                document.write(fib(i));
+            }
+        }
+        printFib(10);
+
+        //57. Find the GCD of Two Numbers Using Recursion
+        function gcd(a, b) {
+            if (b === 0) {
+                return a;
+            } else {
+                return gcd(b, a % b);
+            }
+        }
+        const result = gcd(12, 18);
+        document.write(`The GCD is ${result}`);
+
+        //58. Program to find Factorial of a given number using Recurssion
+        function fact(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * fact(n - 1);
+        }
+        document.write(fact(5));
+
+        //59.  Program to print sum of N Natural Numbers using Recurssion
+        function cal(n) {
+            if (n === 1) {
+                return 1;
+            } else {
+                return n + cal(n - 1);
+            }
+        }
+        document.write(cal(5));
+
+        //60. Define is Object and what are the Types of Objects in Javascript?
+        const person = {
+            name: 'John',
+            age: 30
+        };
+        const numbers = [1, 2, 3, 4, 5];
+        const currentDate = new Date();
+
+        //61. Write a program to demonstrate User-defined Object?
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.greet = function() {
+        document.write(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+        };
+        const person1 = new Person('John', 30);
+        const person2 = new Person('Jane', 25);
+        document.write(person1.name); 
+        document.write(person2.age);
+        person1.greet();
+        person2.greet();
+
+
+        //62. Write a javascript program to demonstrate Number Object?
+        const num1 = new Number(5);
+        const num2 = 10;
+        document.write(num1.valueOf()); 
+        document.write(num2.toString()); 
+        document.write(Number.MAX_VALUE);
+        document.write(Number.MIN_VALUE);
+        document.write(Number.NaN); 
+        const x = 10;
+        const y = 20;
+        document.write(Number.isInteger(x)); 
+        document.write(Number.isFinite(y)); 
+        document.write(Number.isNaN('abc'));
+        document.write(Number.parseFloat('3.14')); 
+        document.write(Number.parseInt('42'));
+
+
+        //63. Write a javascript program to demonstrate Boolean Object?
+        const bool1 = new Boolean(true);
+        const bool2 = false;
+        document.write(bool1.valueOf()); 
+        document.write(bool2.toString());
+        const x = 5;
+        const y = 10;
+        document.write(x > y);
+        document.write(Boolean(x > y));
+        document.write(Boolean(x < y));
+
+
+        //64. Write a javascript program to demonstrate String Objects?
+        const str1 = new String("Hello");
+        const str2 = "World";
+        document.write(str1.valueOf()); 
+        document.write(str2.toString()); 
+        const mesg = str1.concat(" ", str2);
+        document.write(mesg);
+        document.write(mesg.toUpperCase()); 
+        document.write(mesg.includes("lo"));
+        document.write(str1.length);
+        document.write(str2.length);
+
+
+        //65. Write a javascript program to demonstrate Array?
+        const array1 = new Array(); 
+        const array2 = ["apple", "banana", "orange"];
+        document.write(array1.length);
+        document.write(array2.toString());
+
+
+        //66. Write a javascript program to read and print matrix elements dynamically?
+        const rows = parseInt(prompt("rows:"));
+        const cols = parseInt(prompt("cols:"));
+        const matrix = [];
+        for (let i = 0; i < rows; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < cols; j++) {
+                matrix[i][j] = parseInt(prompt(`Enter the element at position [${i + 1}][${j + 1}]:`));
+            }
+        }
+        document.write("Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < cols; j++) {
+                rowStr += matrix[i][j] + " ";
+            }
+            document.write(rowStr.trim());
+        }
+
+
+        /*67. Write a javascript program to read and print matrix elements dynamically?
+        1. Print Transpose of Matrix
+        2. Print Diagonal Elements & Sum of Diagonal Elements
+        3. Print Upper Triangle Matrix
+        4. Print Lower Triangle Matrix */
+        const rows = parseInt(prompt("Enter the number of rows:"));
+        const columns = parseInt(prompt("Enter the number of columns:"));
+        const matrix = [];
+        for (let i = 0; i < rows; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix[i][j] = parseInt(prompt(`Enter the element at position [${i + 1}][${j + 1}]:`));
+            }
+        }
+        console.log("Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < columns; j++) {
+                rowStr += matrix[i][j] + " ";
+            }
+            console.log(rowStr.trim());
+        }
+        console.log("Transpose of Matrix:");
+        const transposeMatrix = [];
+        for (let i = 0; i < columns; i++) {
+            transposeMatrix[i] = [];
+            for (let j = 0; j < rows; j++) {
+                transposeMatrix[i][j] = matrix[j][i];
+            }
+        }
+        for (let i = 0; i < columns; i++) {
+            let rowStr = "";
+            for (let j = 0; j < rows; j++) {
+                rowStr += transposeMatrix[i][j] + " ";
+            }
+            console.log(rowStr.trim());
+        }
+        console.log("Diagonal Elements:");
+        let sumOfDiagonal = 0;
+        for (let i = 0; i < rows; i++) {
+            console.log(matrix[i][i]);
+            sumOfDiagonal += matrix[i][i];
+        }
+        console.log("Sum of Diagonal Elements:", sumOfDiagonal);
+        console.log("Upper Triangle Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < columns; j++) {
+                rowStr += (j < i ? " " : matrix[i][j]) + " ";
+            }
+        }
+
+
+        //68. Write a javascript program for addition of two Matrix elements dynamically?
+        const rows = parseInt(prompt("Enter the number of rows:"));
+        const columns = parseInt(prompt("Enter the number of columns:"));
+        const matrix1 = [];
+        console.log("Enter elements for Matrix 1:");
+        for (let i = 0; i < rows; i++) {
+            matrix1[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix1[i][j] = parseInt(
+                prompt(`Enter the element at position [${i + 1}][${j + 1}] of Matrix 1:`)
+                );
+            }
+        }
+        const matrix2 = [];
+        console.log("Enter elements for Matrix 2:");
+        for (let i = 0; i < rows; i++) {
+            matrix2[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix2[i][j] = parseInt(
+                prompt(`Enter the element at position [${i + 1}][${j + 1}] of Matrix 2:`)
+                );
+            }
+        }
+        const sumMatrix = [];
+        for (let i = 0; i < rows; i++) {
+            sumMatrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        console.log("Matrix 1:");
+        printMatrix(matrix1);
+        console.log("Matrix 2:");
+        printMatrix(matrix2);
+        console.log("Sum of Matrices:");
+        printMatrix(sumMatrix);
+        function printMatrix(matrix) {
+            for (let i = 0; i < rows; i++) {
+                let rowStr = "";
+                for (let j = 0; j < columns; j++) {
+                rowStr += matrix[i][j] + " ";
+                }
+                console.log(rowStr.trim());
+            }
+        }
+
+
+        //69. Write a javascript program for Substraction of two Matrix elements dynamically?
+        const differenceMatrix = [];
+        for (let i = 0; i < rows; i++) {
+            differenceMatrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                differenceMatrix[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+
+        //70. Write a javascript program for Multiplication of two Matrix elements dynamically?
+        const productMatrix = [];
+        for (let i = 0; i < rows1; i++) {
+            productMatrix[i] = [];
+            for (let j = 0; j < columns2; j++) {
+                productMatrix[i][j] = 0;
+                for (let k = 0; k < columns1; k++) {
+                productMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        //71. Write a JavaScript program to demonstrate Class and Object?
+        //creating class
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+
+            calculateArea() {
+                return this.width * this.height;
+            }
+
+            calculatePerimeter() {
+                return 2 * (this.width + this.height);
+            }
+        }
+        // Create an object of the Rectangle class
+        const rectangle1 = new Rectangle(5, 7);
+        // Call the methods on the object
+        console.log(rectangle1.calculateArea());
+        console.log(rectangle1.calculatePerimeter());
+
+
+        //72. Write a JavaScript program to demonstrate Constructor?
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            this.introduce = function() {
+                console.log("Hi, my name is " + this.name + " and I am " + this.age + " years old.");
+            };
+        }
+        // Create an object using the Person constructor
+        var person1 = new Person("John", 25);
+        var person2 = new Person("Jane", 30);
+        // Call the introduce method
+        person1.introduce();
+        person2.introduce();
+
+
+        //73. Write a JavaScript program to demonstrate Single Inheritance?
+        class animal{
+            constructor(){
+                this.a_name = "Wild Animal";
+                this.a_type = "Dog";
+            }
+            a_display(){
+                document.write("I am a animal class:"+this.a_name + " " + this.a_type +"<br/>" );
+            }
+        }
+        class dog extends animal{
+            constructor(){
+                super();
+                this.d_name = "Puppy";
+                this.d_year = 8;
+            }
+            d_display(){
+                document.write("I am a dog class:"+ this.d_name + " "+this.d_year + "<br/>");
+            }
+        }
+        //Creating an object for Dog class
+        var d = new dog();
+        document.write("Parent class:",d.a_name + " "  + "<br/>"+ d.a_type + "<br/>" );
+        document.write("Child class:",d.d_name + " " +"<br/>" + d.d_year + "<br/>");
+        d.a_display();
+        d.d_display();
+
+
+        //74. Write a JavaScript program to demonstrate Multilevel Inheritance?
+        class gparent{
+            constructor(){
+                this.g_name = "Srec";
+                this.g_year = 2000;
+            }
+            g_display(){
+                document.write("I am grand parent class:" + this.g_name +"<br/>" + this.g_year + "<br/>");
+            }
+        }
+        class fparent extends gparent{
+            constructor(){
+                super();
+                this.f_name = "Sriit";
+                this.f_year = 2015;
+            }
+            f_display(){
+                document.write("I am father class:" + this.f_name + "<br/>" + this.f_year + "<br/>");
+            }
+        }
+        class child extends fparent{
+            constructor(){
+                super();
+                this.c_name = "Sru";
+                this.c_year = 2024;
+            }
+            c_display(){
+                document.write("I am child class:" + this.c_name + "<br/>" + this.c_year + "<br/>");
+            }
+        }
+        var c = new child();
+        document.write("grandparent class:" + c.g_name + "<br/>" + c.g_year + "<br/>");
+        document.write("father class:" + c.f_name + "<br/>" + c.f_year + "<br/>");
+        document.write("child class:" + c.c_name + "<br/>" + c.c_year + "<br/>");
+        c.g_display();
+        c.f_display();
+        c.c_display();
+
+
+        //75. Write a JavaScript program to demonstrate Hierarchical Inheritance?
+        class mother{
+            constructor(){
+                this.m_name = " Srit";
+            }
+            m_display(){
+                document.write("I am mother class:" + this.m_name + "<br/>");
+            }
+        }
+        class child1 extends mother{
+            constructor(){
+                super();
+                this.c1_name = "Sriit";
+            }
+            c1_display(){
+                document.write("I am child1 class:" + this.c1_name + "<br/>");
+            }
+        }
+        class child2 extends mother{
+            constructor(){
+                super();
+                this.c2_name = "Sru";
+            }
+            c2_display(){
+                document.write("I am child2 class:" + this.c2_name + "<br/>");
+            }
+        }
+        var c1 = new child1();
+        document.write("Mother class:" + c1.m_name + "<br/>");
+        document.write("Child1 class:" + c1.c1_name + "<br/>");
+        c1.m_display();
+        c1.c1_display();
+
+        var c2 = new child2();
+        document.write("Mother class:" + c2.m_name + '<br/>');
+        document.write("Child2 class:" + c2.c2_name + "<br/>");
+        c2.m_display();
+        c2.c2_display();
+
+
+        //76. Write a JavaScript program to demonstrate Hybrid Inheritance?
+        class g1parent{
+            constructor(){
+                this.g1_name = "Srec";
+            }
+            g1_display(){
+                document.write("I am grand parent class:"+ this.g1_name + '<br/>');
+            }
+        }
+        class f1parent extends g1parent{
+            constructor(){
+                super();
+                this.f1_name = "Srit";
+            }
+            f1_display(){
+                document.write(" I am father class:" + this.f1_name + "<br/>");
+            }
+        }
+        class daughter extends f1parent{
+            constructor(){
+                super();
+                this.d_name = "Sru";
+            }
+            d_display(){
+                document.write("I am daughter class:"+ this.d_name + "<br/>");
+            }
+        }
+        class son extends f1parent{
+            constructor(){
+                super();
+                this.s_name = "Sriit";
+            }
+            s_display(){
+                document.write("I am son class:"+ this.s_name + "<br/>");
+            }
+        }
+
+        var d1 = new daughter();
+        document.write(d1.g1_name + "<br/>");
+        document.write(d1.f1_name + "<br/>");
+        document.write(d1.d_name + "<br/>");
+        d1.g1_display();
+        d1.f1_display();
+        d1.d_display();
+        var s1 = new son();
+        document.write(s1.g1_name + "<br/>");
+        document.write(s1.f1_name + "<br/>");
+        document.write(s1.s_name + "<br/>");
+        s1.g1_display();
+        s1.f1_display();
+        s1.s_display();
+
+
+        //77. Write a JavaScript program to demonstrate Encapsulation?
+        class student{
+            constructor(){
+                var name;
+                // var rollno;
+                // var subject;
+            }
+            getName(name){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+        }
+        var s = new student();
+        s.setName("Rithika");
+        document.write(s.getName() +"<br/>");
+        
+        class student1{
+            constructor(){
+                var rollno;
+            }
+            getRollno(rollno){
+                return this.rollno;
+            }
+            setRollno(rollno){
+                this.rollno = rollno;
+            }
+        }
+        var s1 = new student1();
+        s1.setRollno(1363);
+        document.write(s1.getRollno() +"<br/>");
+
+        class student2{
+            constructor(){
+                var subject;
+            }
+            getSubject(subject){
+                return this.subject;
+            }
+            setSubject(subject){
+                this.subject = subject;
+            }
+        }
+        var s2 = new student2();
+        s2.setSubject("OOPJS");
+        document.write(s2.getSubject() +"<br/>");
+
+        class parent{
+            constructor(){
+                this.p_name = "wild animal";
+                this.p_type = "Cat"
+            }
+            p_display(){
+                document.write("I am a parent class:"+this.p_name +"<br/>" + this.p_type +"<br/>" );
+            }
+        }
+        class Cat extends parent{
+            constructor(){
+                super();
+                this.c_name = "Cattle";
+                this.c_type = 8
+            }
+            c_display(){
+                document.write("I am a cat class:"+ this.c_name + "<br/>" + this.c_type + "<br/>");
+            }
+        }
+        //Creating an object for cat class
+        var c = new Cat();
+        document.write("Parent class:",c.p_name + "<br/>" + c.p_type + "<br/>");
+        document.write("Child class:",c.c_name +"<br/>" + c.c_type + "<br/>");
+        c.p_display();
+        c.c_display();
+
+        class parent{
+            constructor(){
+                var p_name;
+                var p_year;
+            }
+            getP_Name(){
+                return this.p_name;
+            }
+            setP_Name(p_name){
+                this.p_name;
+            }
+        }
+
+
+        //78. Write a JavaScript program to demonstrate Polymorphism?
+        class shape
+        {
+            draw(){
+                return "Iam a Generic Shape";	
+            }
+        }
+        class square extends shape
+        {
+            draw(){
+                return "Iam a Square";	
+            }
+        }
+        class circle extends shape
+        {
+            draw(){
+                return "Iam a circle";	
+            }
+        }
+        //Creating an Object for student class
+        var s = new shape();
+        document.write(s.draw()+"<br/>");
+        var s = new square();
+        document.write(s.draw()+"<br/>");
+        var s = new circle();
+        document.write(s.draw()+"<br/>");
+
+
+        /*Two Types:
+        1. Overloading - Operator Overloading, Method Overloading
+        2. Overriding - can be achived using Inheritance*/
+        //1. Overloading - Operator Overloading, Method Overloading
+        class addition
+        {
+            add(x=10,y=20){
+                return x+y;	
+            }
+        }
+        //Creating an Object for addition class
+        var a = new addition();
+        document.write(a.add()+"<br/>");
+        document.write(a.add("SRU","SRIT")+"<br/>");
+        document.write(a.add("SRU")+"<br/>");
+
+        // 2. Overriding - can be achived using Inheritance
+        class shape
+        {
+            draw(){
+                return "Iam a Generic Shape";	
+            }
+        }
+        class square extends shape
+        {
+            draw(){
+                return "Iam a Square";	
+            }
+        }
+        class circle extends shape
+        {
+            draw(){
+                return "Iam a circle";	
+            }
+        }
+        //Creating an Object for shape class
+        var s = new shape();
+        document.write(s.draw()+"<br/>");
+        var s = new square();
+        document.write(s.draw()+"<br/>");
+        var s = new circle();
+        document.write(s.draw()+"<br/>");
+
+
+        //79. Write a JavaScript program to demonstrate Abstraction?
+        class car{
+            constructor(name,color,price){
+                this.name = name;
+                this.color = color;
+                this.price = price;
+                this.nextYearIncrease = 80000;
+                this.getCarDetails = function(){
+                    document.write("Car name is :" + this.name + "<br/>");
+                    document.write("Color of the car is :" + this.color + "<br/>");
+                    document.write("Price of the car is :" + this.price + "<br/>");
+                }
+                this.getNextYearPrice = function(){
+                    document.write("Next year price of car is :"+(this.price + this.nextYearIncrease) + "<br/>");
+                }
+            }
+        }
+        var car1 = new car("Ferari","Black",5000000);
+        car1.getCarDetails();
+        car1.nextYearIncrease = -30000;
+        car1.getNextYearPrice();
+
+
+        //80. Write a JavaScript program to demonstrate Static Keyword?
+        class Circle {
+            static PI = 3.14159;
+
+            static calculateArea(radius) {
+                return Circle.PI * radius ** 2;
+            }
+        }
+        document.write(Circle.calculateArea(5));
+
+        //81. Write a JavaScript program to demonstrate document objects?
+        // <!--Four Types of Document Objects
+        // 1.document.getElementById()
+        // 2.document.getElementByName()
+        // 3.document.getElementByClassName()
+        // 4.document.getElementByTagName()-->
+        // <p id="demo">SRU</p>
+        // <script language="Javascript" type="text/Javascript">
+        //     document.getElementById("demo").innerHTML = "OOPJS"; <closing tag of script>
+        // <!--Event-->
+        // <p id="p2">p2</p>
+        // <button onClick = "document.getElementById('p2').innerHTML = alert('Rithika')">Click Here</button>
+
+        // <p id="p3">p3</p>
+        // <label for="name" id="name">Name:</label>
+        // <input type="text" id=" name">
+        // <button on click = "document.getElementById('p3').innerHTML = alert('Saivarsha')" >Submit</button>
+
+        //82. Create a page to perform mathematical operations like (+,-,*,/) using two text boxes and display the result using alert box?
+        // <!DOCTYPE html>
+        // <html>
+        //     <head>
+        //         <title>Math Operations</title>
+        //     </head>
+        //     <body>
+        //         <h1>Math Operations</h1>
+        //         <label for="num1">Number 1:</label>
+        //         <input type="number" id="num1">
+        //         <label for="num2">Number 2:</label>
+        //         <input type="number" id="num2">
+        //         <button onclick="performMathOperation()">Calculate</button>
+        //         <script>
+        //             function performMathOperation() {
+        //             // Get the values from the input text boxes
+        //             const num1 = parseInt(document.getElementById("num1").value);
+        //             const num2 = parseInt(document.getElementById("num2").value);
+        //             // Perform addition
+        //             const sum = num1 + num2;
+        //             alert("Sum: " + sum);
+        //             // Perform subtraction
+        //             const difference = num1 - num2;
+        //             alert("Difference: " + difference);
+        //             // Perform multiplication
+        //             const product = num1 * num2;
+        //             alert("Product: " + product);
+        //             // Perform division
+        //             const quotient = num1 / num2;
+        //             alert("Quotient: " + quotient);
+        //             }
+        //         </closing script>
+        //     </closing body>
+        // </closing html> // remove closing word in other file
+
+        /*83. Create Registration form containing the fields 
+Name, Username, Password validate the form, user confirm box showing the message that "do you really want to continue" , if you press ok the message should be displayed as "Entered details are correct" , if press cancel the message should be displayed as " ReEnter the details"?*/
+            // <!DOCTYPE html>
+            // <html>
+            // <head>
+            //     <title>Registration Form</title>
+            //     <style>
+            //         .error {
+            //         color: red;
+            //         font-weight: bold;
+            //         }
+            //     </style>
+            // </head>
+            // <body>
+            //     <h1>Registration Form</h1>
+            //     <form onsubmit="return validateForm()">
+            //         <label for="name">Name:</label>
+            //         <input type="text" id="name">
+            //         <span id="nameError" class="error"></span>
+            //         <br>
+            //         <label for="username">Username:</label>
+            //         <input type="text" id="username">
+            //         <span id="usernameError" class="error"></span>
+            //         <br>
+            //         <label for="password">Password:</label>
+            //         <input type="password" id="password">
+            //         <span id="passwordError" class="error"></span>
+            //         <br>
+            //         <button type="submit">Register</button>
+            //     </form>
+            //     <script>
+            //         function validateForm() {
+            //         // Retrieve form input values
+            //         const name = document.getElementById("name").value;
+            //         const username = document.getElementById("username").value;
+            //         const password = document.getElementById("password").value;
+            //         // Validate Name field
+            //         if (name.trim() === "") {
+            //             document.getElementById("nameError").textContent = "Name is required";
+            //             return false;
+            //         }
+            //         // Validate Username field
+            //         if (username.trim() === "") {
+            //             document.getElementById("usernameError").textContent = "Username is required";
+            //             return false;
+            //         }
+            //         // Validate Password field
+            //         if (password.trim() === "") {
+            //             document.getElementById("passwordError").textContent = "Password is required";
+            //             return false;
+            //         }
+            //         // Confirmation message
+            //         const confirmation = confirm("Do you really want to continue?");
+            //         // Display appropriate message based on user's choice
+            //         if (confirmation) {
+            //             alert("Entered details are correct");
+            //         } else {
+            //             alert("Re-enter the details");
+            //         }
+            //         // Prevent the form from submitting (since we're using JavaScript for validation)
+            //         return false;
+            //         }
+            //     </closing script>
+            // </body>
+            // </html>
+
+            /*84. Develop a Login form containing the fields 
+            Username, Password validate the form, if your entered username and password matches with your predefined values, print “Authorized User” else Print “Un Authorized User”.*/
+            // <!DOCTYPE html>
+            // <html lang="en">
+            // <head>
+            //     <meta charset="UTF-8">
+            //     <title>Login Form</title>
+            //     <style>
+            //         /* Basic styling for the form */
+            //         .login-form {
+            //             max-width: 300px;
+            //             margin: 0 auto;
+            //             padding: 20px;
+            //             border: 1px solid #ccc;
+            //             border-radius: 5px;
+            //             background-color: #f9f9f9;
+            //         }
+            //         .login-form input {
+            //             display: block;
+            //             width: 100%;
+            //             padding: 8px;
+            //             margin: 10px 0;
+            //             box-sizing: border-box;
+            //         }
+            //         .login-form button {
+            //             padding: 10px;
+            //             background-color: #4CAF50;
+            //             color: white;
+            //             border: none;
+            //             border-radius: 5px;
+            //             cursor: pointer;
+            //         }
+            //         .login-form button:hover {
+            //             background-color: #45a049;
+            //         }
+            //     </style>
+            // </head>
+            // <body>
+            // <div class="login-form">
+            //     <h2>Login</h2>
+            //     <form id="loginForm" onsubmit="return validateLogin()">
+            //         <label for="username">Username:</label>
+            //         <input type="text" id="username" name="username" required>
+            //         <label for="password">Password:</label>
+            //         <input type="password" id="password" name="password" required>
+            //         <button type="submit">Login</button>
+            //     </form>
+            // </div>
+            // <script>
+            //     // Predefined valid username and password
+            //     const validUsername = "admin";
+            //     const validPassword = "password123";
+            //     function validateLogin() {
+            //         // Get the values from the form
+            //         const username = document.getElementById("username").value;
+            //         const password = document.getElementById("password").value;
+            //         // Check if the entered values match the predefined ones
+            //         if (username === validUsername && password === validPassword) {
+            //             alert("Authorized User");
+            //         } else {
+            //             alert("Un Authorized User");
+            //         }
+            //         // Return false to prevent form submission (for demonstration purposes)
+            //         return false;
+            //     }
+            // </closing script>
+            // </body>
+            // </html>
+
+            //85. Write a JavaScript program to demonstrate Exception Handling with Examples (divide by Zero Error)
+            // Function to divide two numbers
+            function divide(a, b) {
+                // Check if the divisor is zero
+                if (b === 0) {
+                    throw new Error("Cannot divide by zero."); // Throw a custom error
+                }
+                return a / b; // Perform the division if divisor is not zero
+                }
+                function demonstrateDivision(a, b) {
+                try {
+                    // Attempt to divide the numbers
+                    const result = divide(a, b);
+                    document.write(`The result of ${a} / ${b} is: ${result}`);
+                } catch (e) {
+                    // If an error is caught, print the error message
+                    document.write(`Error: ${e.message}`);
+                }
+            }
+            // Test cases to demonstrate the function
+            demonstrateDivision(10, 2);  // Expected output: The result of 10 / 2 is: 5
+            demonstrateDivision(10, 0);  // Expected output: Error: Cannot divide by zero.
+
+            //86. Write a JavaScript Program to Read a list Dynamically and retrieve the element which is not there in the list with index, Handle the list index out of range exception?
+            // Function to retrieve an element from an array at a specific index
+            function getElementAtIndex(array, index) {
+                try {
+                    // Check if the index is out of range
+                    if (index < 0 || index >= array.length) {
+                    throw new RangeError(`Index out of range: ${index}`); // Throw a RangeError
+                    }
+                    // If the index is valid, return the element
+                    return array[index];
+                } catch (e) {
+                    // Handle the error and provide a user-friendly message
+                    console.error(`Error: ${e.message}`);
+                    return null; // Return a default value to indicate an invalid operation
+                }
+            }
+            // Example array
+            const myArray = ["apple", "banana", "cherry", "date"];
+            // Accessing within valid bounds
+            document.write(getElementAtIndex(myArray, 2)); // Expected output: "cherry"
+            // Trying to access out of bounds
+            document.write(getElementAtIndex(myArray, 10)); // Expected output: "Error: Index out of range: 10"
+            // Trying to access a negative index
+            document.write(getElementAtIndex(myArray, -1)); // Expected output: "Error: Index out of range: -1"
+
+            //87. Write a JavaScript Program to demonstrate Types of errors with Example?
+            // 1. Syntax Error
+            try {
+                eval("var a = "); // This will cause a syntax error due to incomplete code
+            } catch (e) {
+                console.error("Syntax Error caught:", e.message);
+            }
+            // 2. Type Error
+            try {
+                const num = 10;
+                num.toUpperCase(); // This will cause a type error because 'toUpperCase' doesn't work on numbers
+            } catch (e) {
+                console.error("Type Error caught:", e.message);
+            }
+            // 3. Reference Error
+            try {
+                console.log(nonExistentVariable); // This will cause a reference error because the variable is not defined
+            } catch (e) {
+                console.error("Reference Error caught:", e.message);
+            }
+            // 4. Range Error
+            try {
+                const arr = new Array(-1); // This will cause a range error due to invalid array length
+            } catch (e) {
+                console.error("Range Error caught:", e.message);
+            }
+            // 5. Eval Error
+            try {
+                eval("var x = 1; var x = 2;"); // This can cause an eval error due to invalid evaluation
+            } catch (e) {
+                console.error("Eval Error caught:", e.message);
+            }
+            // 6. URI Error
+            try {
+                decodeURIComponent("%"); // This will cause a URI error due to an invalid URI component
+            } catch (e) {
+                console.error("URI Error caught:", e.message);
+            }
+    </script>
+</body>
+</html>
