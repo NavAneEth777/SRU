@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in javascript</title>
+<body>
+    <script language="javascript" type="text/javascript">
+    //Defination of the function/callerd function
+    function name()
+    {
+
+    }
+    /*1u types of Functions
+    1.Built in Functions
+    2.User dxefined Functions
+    */
+    /*1.Built in Functions
+    number()
+        string()
+        boolean()
+        big int()...
+        */
+        //2.used-defined Functions
+        name();//Declaring a function /calling a functyion
+        
+    function factorial(n) {
+        if (n === 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    // Example usage for input number 5
+    console.log(factorial(5)); // Output: 120
+
+    let num = 10; 
+    let fibo = [];
+    fibo[0] = 0;
+    fibo[1] = 1;
+    let i = 2;
+    while (fibo[i - 1] <= num) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+        i++;
+    }
+    document.write('Fibonacci sequence:');
+    for (let j = 0; j < i - 1; j++) {
+        document.write(fibo[j]);
+    }
+
+    /*
+    */
+    </script>
+
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects in javascript(user-defined objects)</title>
+    </head>
+    <body>
+        <script language="javascript" type="text/javascript">
+            /*2 types of objects
+            1.user-defined objects
+            2.build in objects
+            */
+           //1.user-defined objects
+            var student={
+            name:"SRU",
+            rollno:1234,
+            subject:"OOPJS"
+            };
+            document.write(student.name+" "+student.rollno+" "+student.subject);
+            //creating an object with new keyword
+            var person=new object();
+            person.name="SR University";
+            person.age=18;
+            person.city="Warangal";
+            doccument.write(person.name+" "+person.city);
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> build in objects</title>
+    </head>
+    <body>
+        <script language="javascript" type="text/javascript">
+            /*build-in objects/system defined <objects
+            1.number
+            2.boolean
+            3.string
+            4.date
+            5.math
+            6.array
+            7.all functions are objects
+            8.object
+            9.regular expressions
+            */
+            //1.number
+            var a=10;
+            var b=2.5;
+            document.write(typeof(a)+"<br/>");
+            document.write(typeof(b)+"<br/>");
+            var c=new numbers(15);
+            document.write(typeof(c)+"<br/>");
+            document.write(c+"<br/>");15
+            //2.boolean
+            var d=true;
+            document.write(typeof(d)+"<br/>");
+            document.write(d+"<br/>");
+            var e=new boolean(false);
+            document.write(typeof(e)+"<br/>");
+            document.write(e+"<br/>");
+            //3.string object
+            var str="SR University";
+            var str1=new string("OOPJS");
+            document.write(str+"<br/>");
+            document.write(str1+"<br/>");
+            //string handling functions/built-in/
+            document.write(str.lenght+"<br/>");//13
+            document.write(str.indexOf('s')+"<br/>");//9
+            document.write(str1.indexOf(+"<br/>");//4
+
+        </script>
+    </body>
+</html>

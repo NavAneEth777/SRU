@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .box {
+            height: 50px;
+            width: 50px;
+            border: 2px solid red;
+            background-color: aqua;
+            position: relative;
+            background-image: url("sru.png");
+            background-repeat: no;
+            animation-name: sru;
+            animation-delay: 2s;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            }
+        @keyframes sru {
+            /* 0%{top: 300px; left: 0px;}
+            20%{top: 0px; left: 0px;}
+            40%{top: 0px; left: 300px;}
+            60%{top: 150px; left: 300px;}
+            80%{top: 150px; left: 0px;}
+            100%{top: 300px; left: 300px;} */
+            /* 0%{top: 300px; left: 0px;}
+            25%{top: 0px; left: 0px;}
+            50%{top: 150px; left: 150px;}
+            75%{top: 0px; left: 300px;}
+            100%{top: 300px; left: 300px;} */
+            0%{top: 0px; left: 0px; background-image: url("sru1.png");}
+            25%{top: 300px; left: 300px; background-image: url("sru2.png");}
+            50%{top: 150px; left: 150px;}
+            75%{top: 300px; left: 0px; background-image: url("sru3.png");}
+            100%{top: 0px; left: 300px; background-image: url("sru2.png");}
+
+        }
+    </style>
+        
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
+

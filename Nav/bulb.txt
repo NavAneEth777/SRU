@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<button name="bulbon" onclick="document.getElementById('bulb').src='bulbon.jpg'">Bulb ON</button>
+		<img id="bulb" src="bulboff.jpg">
+		<button name="bulboff" onclick="document.getElementById('bulb').src='bulboff.jpg'">Bulb OFF</button>
+	</body>
+</html>

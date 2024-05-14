@@ -1,0 +1,650 @@
+<!-- 1. countries -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selection</title>
+</head>
+<body>
+    <label for="country">Select Countries:</label>
+    <select id="country" name="country">
+        <option value="USA">London</option>
+        <option value="CAN" selected>india</option>
+        <option value="GBR">Russia</option>
+        <option value="FRA" selected>Japan</option>
+        <option value="GER">United states</option>
+        <option value="JPN">Nepal</option>
+        <option value="AUS">Australia</option>
+        <option value="BRA">Brazil</option>
+        <option value="IND">France</option>
+        <option value="CHN" selected>German</option>
+    </select>
+</body>
+</html>
+
+
+<!-- 2. Student Information -->
+<form action="" style="height:420px;width: 450px;background-color: whitesmoke;">
+    <h4 style="margin-left: 110px;">STUDENT INFORMATION</h4>
+    <p style="  margin-left: 20px;">
+        <label for="Name">Name Of The Student</label>
+        <input type="text" name="" id="A" style="margin-left: 50px;">
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="Roll No">RollNo:</label>
+        <input type="text" id="2" style="margin-left: 139px;">
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="department">Department</label>
+        <select name="course" id="3" style="margin-left: 113px;">
+            <option value="CSE" selected>CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="Mech">MECH</option>
+        </select>
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="DOB">Date Of Birth</label>
+        <input type="date" style="margin-left: 100px;" >
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="gender">Gender</label>
+        <input type="radio" id="gender" value="m" style="margin-left: 140px;">Male
+        <input type="radio" id="gender" value="f">Female
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="email">Email Id</label>
+        <input type="text" id="5" style="margin-left: 130px;">
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" cols="25" rows="3" style="margin-left: 188px; margin-top:-10"></textarea>
+    </p>
+    <p style="  margin-left: 20px;">
+        <label for="lang">Known Languages:</label>
+        <input type="checkbox" value="T" id="6" style="margin-left: 60px;">Telugu
+        <input type="checkbox" value="H" id="7">Hindi
+        <input type="checkbox" value="E" id="8">English
+    </p>
+    <button style="  margin-left: 20px;">Submit</button>
+    <button style="  margin-left: 130px;">Reset</button>
+</form>
+
+
+<!-- 5. sign up -->
+<div class="signup" style="width: 400px; height: 420px; border: 1px solid black; background-color: darkslategrey;">
+    <div class="signup" style="width: 400px; border: 1px solid black; height: 25px; text-align: center; background-color: orange;">Sign Up</div>
+    <div class="content" style="display: grid;">
+        <form action="" style="margin: 20px;">
+            <div class="1" style="margin-bottom: 10px;">
+                <label for="name" style="margin-left: 30px; color: lightgoldenrodyellow;">First Name:</label>
+                <input type="text" id="name" placeholder="Enter First Name" style="margin-left: 30px;">
+            </div>
+            <div class="2" style="margin-bottom: 10px;">
+                <label for="name" style="margin-left: 30px; color: lightgoldenrodyellow;">Last Name:</label>
+                <input type="text" id="name" placeholder="Enter Last Name" style="margin-left: 30px;">
+            </div>
+            <div class="3" style="margin-bottom: 10px;">
+                <label for="name" style="margin-left: 16px; color: lightgoldenrodyellow;">Screen Name:</label>
+                <input type="text" id="name" placeholder="Enter Screen Name" style="margin-left: 30px;">
+            </div>
+            <div class="4" style="margin-bottom: 10px;">
+                <label for="name" style="margin-left: 16px; color: lightgoldenrodyellow;">Date of Birth:</label>
+                <input type="date" id="name" style="margin-left: 30px;">
+            </div>
+            <div class="5" style="margin-bottom: 10px;">
+                <label for="gender" style="margin-left: 55px; color: lightgoldenrodyellow;">Gender:</label>
+                <input type="radio" name="gender" value="m" style="margin-left: 30px; color: lightgoldenrodyellow;"><span style="color: lightgoldenrodyellow;">Male</span>
+                <input type="radio" name="gender" value="f" style="margin-left: 30px; color: lightgoldenrodyellow;"><span style="color: lightgoldenrodyellow;">Female</span>
+            </div>
+            <div class="6" style="margin-bottom: 10px;">
+                <label for="country" style="margin-left: 48px; color: lightgoldenrodyellow;">Country:</label>
+                <input type="country" id="country" style="margin-left: 30px;">
+            </div>
+            <div class="7" style="margin-bottom: 10px;">
+                <label for="mail" style="margin-left: 55px; color: lightgoldenrodyellow;">E-mail:</label>
+                <input type="text" id="mail" placeholder="Enter E-mail..." style="margin-left: 30px;">
+            </div>
+            <div class="8" style="margin-bottom: 10px;">
+                <label for="ph" style="margin-left: 57px; color: lightgoldenrodyellow;">Phone:</label>
+                <input type="number" id="ph" placeholder="Enter Phone.." style="margin-left: 30px;">
+            </div>
+            <div class="9" style="margin-bottom: 10px;">
+                <label for="pass" style="margin-left: 35px; color: lightgoldenrodyellow;">Password:</label>
+                <input type="password" id="pass" placeholder="Enter Password" style="margin-left: 30px;">
+            </div>
+            <div class="10" style="margin-bottom: 10px;">
+                <label for="pass" style="margin-left: 9px; color: lightgoldenrodyellow;">Confirm Pass:</label>
+                <input type="password" id="pass" placeholder="confirm your Password" style="margin-left: 30px;">
+            </div>
+            <div class="11" style="margin-bottom: 10px;">
+                <input type="checkbox" style="margin-left: 50px; color: lightgoldenrodyellow;"><span style="color: lightgoldenrodyellow;">I agree to the Terms of Use</span>
+            </div>
+            <div class="signup" style="width: 400px; border: 1px solid black; height: 25px; text-align: center; margin: -20px; margin-top: 12px; background: orange;">
+                <button style="background-color: lightgreen; text-decoration: none; border: none; border-radius: 1px; cursor: pointer;">Sudmit</button>
+                <button style="background-color: red; text-decoration: none; border: none; border-radius: 1px; cursor: pointer;">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- 6. user registration form -->
+<div class="regForm" style="width: 500px; background: pink;">
+    <h2 style="padding-left: 110px; margin-bottom: 0;">User Registration Form</h2>
+    <div class="persnol" style="width: 500px; display: grid;">
+        <form action="" style="display: grid; margin: 20px 10px; margin-left: 2px; border: 1px solid grey;">
+            <h5 style="margin: -20x -10px; margin-bottom: 0; margin-top: 0; padding-left: 170px;"> Personnal Information</h5>
+            <div class="content" style="display: flex; margin-bottom: 10px; margin-top: 10px;">
+                Name: <input type="text" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px;">
+                EmailAddress: <input type="text" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px;">
+                Password: <input type="password" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px; width: auto;">
+                ReEnterPassword: <input type="password" name="" id="">
+            </div>
+        </form>
+
+        <form action="" style="display: grid; margin: 20px 10px; margin-left: 2px; border: 1px solid grey;">
+            <h5 style="margin: -20x -10px; margin-bottom: 0; margin-top: 0; padding-left: 190px;"> Address Details</h5>
+            <div class="content" style="display: flex; margin-bottom: 10px; margin-top: 10px;">
+                Address 1: <input type="text" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px;">
+                Address 2: <input type="text" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px;">
+                City: <input type="text" name="" id="">
+            </div>
+            <div class="content" style="display: flex; margin-bottom: 10px; width: auto;">
+                Zipcode: <input type="number" name="" id="">
+            </div>
+            <div class="btn">
+                <button>Sudmit</button>
+                <button>Reset</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<!-- 8. student registration form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <table border="2" style="background-color: orange;">
+        <form action="">
+            <caption>STUDENT REGISTRATION FORM</caption>
+            <tr>
+                <td>FIRST NAME:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>LAST NAME:</td>
+                <td><input type="text"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>EMAIL ID:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER:</td>
+                <td><input type="text" maxlength="10" onkeydown="return /[0-9]/i.test(event.key)"></td>
+            </tr> 
+            <tr>
+                <td>GENDER:</td>
+                <td>
+                    <input type="radio" name="gender" value="m" >Male
+                    <input type="radio" name="gender" value="f" >Female
+                </td>
+            </tr>
+            <tr>
+                <td>ADDRESS:</td>
+                <td><textarea name="" id="" cols="35" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY:</td>
+                <td><input type="text"onkeydown="return /[a-zA-Z]/i.test(event.key)" maxlength="30"></td>
+            </tr>
+            <tr>
+                <td>PIN CODE:</td>
+                <td><input type="text"onkeydown="return /[0-9]/i.test(event.key)" maxlength="6"></td>
+            </tr>
+            <tr>
+                <td>STATE:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>COUNTRY:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>HOBBIES:</td>
+                <td>
+                    <input type="checkbox">Drawing
+                    <input type="checkbox">Singing
+                    <input type="checkbox">Dancing
+                    <input type="checkbox">Sketching
+                    <input type="checkbox">Others
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>QUALIFICATION:</td>
+                <td>
+                    <table border="2">
+                        <tr>
+                            <th>SI.No</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Masters</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>COURSES APPLIED FOR:</td>
+                <td>
+                    <input type="radio" name="crs">B.Tech
+                    <input type="radio" name="crs">Agriculture
+                    <input type="radio" name="crs">M.B.A
+                    <input type="radio" name="crs">M.Tech
+                    <input type="radio" name="crs">PhD
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center"><button>Submit</button>
+                    <button>Reset</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
+
+
+<!-- 10. vijay kumar -->
+<table  border="2" cellpadding = "9" cellspacing = "5">
+    <caption>Personal Details</caption>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Vijay Kumar</td>
+        <td>27</td>
+    </tr>
+    <tr>
+        <td>Sandeep Kumar</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Ravi Teja</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>Sai Kumar</td>
+        <td>23</td>
+    </tr>
+</table>
+
+
+<!-- 13. sr educational society -->
+<table border="2" style="background-color: green;">
+    <caption>SR Educational Society</caption>
+    <tr style="background-color: red;">
+        <th>College Name</th>
+        <th>Branches</th>
+        <th>Specialization 1</th>
+        <th>Specialization 2</th>
+        <th>Specialization 3</th>
+        <th>Specialization 4</th>
+        <th>Specialization 5</th>
+        <th>Specialization 6</th>
+        <th>Specialization 7</th>
+    </tr>
+    <tr style="background-color: yellow;">
+        <td rowspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/SRUniversity.png" alt="" style="width: 100px; height: 120px;"></td>
+        <td>CSE</td>
+        <td>CSE Core</td>
+        <td>CS&AIML</td>
+        <td>CS&DS</td>
+        <td>CS&CS</td>
+        <td>CS&BDA</td>
+        <td>CS&Cloud</td>
+        <td>CS&FullStack</td>
+    </tr>
+    <tr style="background-color: green;">
+        <td>ECE</td>
+        <td>ECE Core</td>
+        <td>ECE&IoT</td>
+        <td>ECE&AI</td>
+        <td>ECE&VLSI</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr style="background-color: yellow;">
+        <td rowspan="2"><img src="https://yt3.googleusercontent.com/5rvijrtpNuVAVlUKfiRfdRWAJL4Jo6bVL0k856y5lPVZwBVL1jLbo98b3ICAKRrsUrWuvjnK1Yc=s900-c-k-c0x00ffffff-no-rj" alt="" style="width: 100px; height: 120px;"></td>
+        <td>CSE</td>
+        <td>CSE Core</td>
+        <td>CS&AIML</td>
+        <td>CS&DS</td>
+        <td>CS&CS</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr style="background-color: green;">
+        <td>ECE</td>
+        <td>ECE Core</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+
+</table>
+
+
+<!-- 14. stationary invoice -->
+<table border="2" style="background-color: orange;">
+    <caption>Stationary Invoice</caption>
+    <tr style="background-color: red;">
+        <th>Item/Desc.</th>
+        <th>Qty</th>
+        <th>@</th>
+        <th>Price</th>            
+    </tr>
+    <tr>
+        <td>Pen(Box)</td>
+        <td>10</td>
+        <td>50</td>
+        <td>500.00</td>
+    </tr>
+    <tr>
+        <td>Pen(Box)</td>
+        <td>10</td>
+        <td>45.99</td>
+        <td>459.90</td>
+    </tr>
+    <tr>
+        <td>Paper Bundles</td>
+        <td>5</td>
+        <td>200</td>
+        <td>1000.00</td>
+    </tr>
+    <tr>
+        <td>Wastepaper Baskets</td>
+        <td>2</td>
+        <td>50</td>
+        <td>100</td>
+    </tr>
+    <tr style="background-color: pink;">
+        <td colspan="3">Subtotal</td>
+        <td>2058.90</td>
+    </tr>
+    <tr style="background-color: yellow;">
+        <td colspan="2">TAx</td>
+        <td>7%</td>
+        <td>141.12</td>
+    </tr>
+    <tr style="background-color: red;">
+        <td colspan="3">Total</td>
+        <td>2200.02</td>
+    </tr>
+</table>
+
+
+<!-- 17. time table -->
+<table border= "2" >
+    <tr>
+        <th rowspan="1" colspan="8">TIME TABLE</th>
+        
+    </tr>
+    <tr>
+        <th rowspan="1" colspan="8">Section-F</th>
+    </tr>
+    <tr>
+        <td rowspan="2" style="background-color: rgb(255, 123, 0); text-align: center;">Day</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">10:00-10:50</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">11:00-11:50</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">12:00-12:50</td>
+        <td rowspan="2" style="background-color: rgb(0, 128, 36);text-align: center">12:50 to 1:20</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">01:20-02:10</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">02:20-03:10</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">03:20-04:10</td>
+    </tr>
+    <tr>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">I</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">II</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">III</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">IV</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">V</td>
+        <td style="background-color: rgb(0, 128, 36);text-align: center">VI</td>
+    </tr>
+    <tr rowspan="2">
+        <td style="background-color: rgb(255, 123, 0);text-align: center">MON</td>
+        <td style="text-align: center;">SSD</td>
+        <td style="text-align: center; color: red">BEEE1/EC</td>
+        <td style="text-align: center;">EP</td>
+        <td rowspan="6" style="background-color: rgb(255, 123, 0); text-align: center;">LUNCH</td>
+        <td colspan="2" style="background-color: rgb(255, 247, 0);text-align: center; color: red;" >PTT5</td>
+        <td style="text-align: center;">C&DE(T)</td>
+    </tr>
+    <tr rowspan="2">
+        <td style="background-color: rgb(255, 123, 0);text-align: center">TUE</td>
+        <td colspan="3" style="text-align: center; color: brown;">IP 5/1 IP 5/2 / Python Programming2</td>
+        <td></td>
+        <td style="text-align: center;">EP</td>
+        <td style="text-align: center;">C&DE(T)</td>
+    </tr>
+    <tr rowspan="2">
+        <td style="background-color: rgb(255, 123, 0);text-align: center">WED</td>
+        <td style="text-align: center;">C&DE</td>
+        <td style="text-align: center;">SSD</td>
+        <td style="text-align: center;">EP</td>
+        <td style="text-align: center;color: red">BEEE1/EC</td>
+        <td colspan="2" style="background-color: rgb(255, 247, 0);text-align: center;color: red">PTT5</td>
+        
+    </tr>
+    <tr>
+        <td style="background-color: rgb(255, 123, 0);text-align: center">THU</td>
+        <td style="text-align: center;">C&DE</td>
+        <td colspan="2" style="text-align: center;">EPL</td>
+        <td style="text-align: center;">C&DE</td>
+        <td style="text-align: center;">EP</td>
+        <td style="text-align: center;color: red">BEEE1/EC</td>
+    </tr>
+    <tr>
+        <td style="background-color: rgb(255, 123, 0);text-align: center">FRI</td>
+        <td colspan="2" style="text-align: center;color: red">EC LAB</td>
+        <td style="text-align: center;">SSD</td>
+        <td colspan="3" style="text-align: center;color: brown">IP 5/1 IP 5/2/Python Programming2</td>
+    </tr>
+    <tr>
+        <td style="background-color: rgb(255, 123, 0);text-align: center">SAT</td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+        <td style="background-color: darkmagenta;text-align: center"></td>
+    </tr>
+</table>
+
+
+<!-- 20. Sr courses list -->
+<div class="lists">
+    <ul style="list-style-type:square;">
+        <li>S R University Courses Offers 
+            <ul style="list-style-type:disc;">
+                <li>School of CS&AI
+                    <ul style="list-style-type:circle;">
+                        <li>CSE-Artificial Intelligence & Machine Learning</li>
+                        <li>CSE-Data Science</li>
+                        <li>CSE...</li>
+                    </ul>
+                </li>
+                <li>School of Engineering
+                    <ul style="list-style-type:circle;">
+                        <li>ECE-Artificial Intelligence</li>
+                        <li>ECE-Internal of Things</li>
+                        <li>ECE...</li>
+                    </ul>
+                </li>
+                <li>School of...</li>
+            </ul>
+        </li>
+        <li>Sumathi Reddy Institute of Technology for Women(SRITW) Courses Offers
+            <ul style="list-style-type:disc;">
+                <li>CSE-Artificial Intelligence & Machine Learning</li>
+                <li>CSE-Data Science</li>
+                <li>CSE...</li>
+                <li>ECE</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<!-- 21. primary memory -->
+<div class="lists">
+    <ol type="I">
+        <li>Primary Memory
+            <ol type="1">
+                <li>Random Access Memory
+                    <ol type="a">
+                        <li>Static RAM</li>
+                        <li>Dynamic RAM</li>
+                    </ol>
+                </li>
+                <li>Read Only Memory
+                    <ol type="a">
+                        <li>Programmable Read Only Memory</li>
+                        <li>Erasable and Programmable Read Only Memory</li>
+                        <li>Electrically Erasable and Programmable Read Only Memory</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Secondary Memory
+            <ol type="1">
+                <li>Hard Disk </li>
+                <li>SSD</li>
+                <li>etc...</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+
+<!-- 41. open box close box -->
+<button name="button" onclick="document.getElementById('suitcase').src='opensuitcase.png'">Open Box</button>
+    <img id="suitcase" src="suitcase.png" alt="">
+    <button name="button" onclick="document.getElementById('suitcase').src='suitcase.png'">Close Box</button>
+    <script language="javascript" type="text/javascript"></script>
+
+
+<!-- 37. traffic light -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .traffic {
+            display: grid;
+            margin: 3px;
+        }
+
+        .traffic .red {
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .traffic .yellow {
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .traffic .green {
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .red, .yellow, .green {
+            animation: traf 4s infinite;
+        }
+
+        .red { animation-delay: 0s; }
+        .yellow { animation-delay: 2s; }
+        .green { animation-delay: 4s; }
+
+        @keyframes traf {
+            0%, 50% { background-color: red; }
+            60%, 70% { background-color: yellow; }
+            80%, 100% { background-color: green; }
+        }
+    </style>
+</head>
+<body>
+    <div class="traffic">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+    </div>
+</body>
+</html>

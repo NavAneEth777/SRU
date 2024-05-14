@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming Concepts</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+        /*OOP in JavaScript
+        1.Class
+        2.Object
+        3.Inheritance
+        4.Encapsulation
+        5.Polymorphism
+        6.Abstraction
+        */
+       /* 1.Class:
+       class is a blue print which is followed by an Object 
+       class is an collection of n number of Objects
+       Syntax:
+       class class_name
+       {
+        //Attributes
+        //Operations
+       }
+       */
+      // Example:
+class student {
+        name = "SRU";
+        roll_no = 1234;
+        subject = "OOPJS";
+        display(){
+            alert("Welcome to SRU!");
+        }
+        show(){
+            alert("Learning OOPJs");
+        }
+      }
+       
+       /* 2.Object:
+       object is a real world entity
+       Instanceof class is an object
+       objects is a collection of attributes and operations
+       Syntax:
+       var object_name = new class_name();
+       */
+      // Example :
+var s = new student();
+document.write(s.name + "<br/>");
+document.write(s.roll_no + "<br/>");
+document.write(s.subject + "<br/>");
+s.display();
+s.show();
+    </script>
+</body>
+</html>

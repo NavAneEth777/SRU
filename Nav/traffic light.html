@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <Script language="Javascript" type="text/Javascript">
+        //Increment Operator-++
+        //++a : preincrement 
+        //a++ : Post-increment
+        var a = 10;
+        document.write(a+"<br/>");
+        document.write(++a+"<br/>");
+        document.write(a+"<br/>");
+        document.write((a++)+"<br/>");
+        document.write(a+"<br/>");
+        document.write((a++)+"<br/>");
+        document.write((a++)+"<br/>");
+        document.write(a+"<br/>");
+
+        //Decrement Operators:-
+        document.write((a)+"<br/>");
+        document.write(--a+"<br/>");
+        document.write(a+"<br/>");
+        document.write((a--)+"<br/>");
+        document.write(a+"<br/>");
+        document.write((a--)+"<br/>");
+        document.write((a--)+"<br/>");
+        document.write(a+"<br/>");
+
+        //6.type of operator
+        a=2.5
+        document.write(typeof(a)+"<br/>");
+        document.write(typeof "1234"+"<br/>");
+        document.write(typeof 4+"<br/>");
+
+        //7.ternary Operator
+        var x = 10;
+        var y = 20;
+        x>y?document.write(x):document.write(y);
+
+        var a = 10;
+        var b = 20;
+        var c = 15;
+        a>b?(a>c?document.write(a):document.write(c)):(b>c?document.write(b):document.write(c));
+        document.write("<br/>");
+        //String operator
+        var x = '10';
+        var y = "SRU";
+        var z = "SRIT";
+        document.write((x+y+z)+"<br/>");
+
+        //Bitwise Operator
+        var a = 10;//1010
+        var b = 5;//0101
+        document.write((a&b)+"<br/>");
+        document.write((a|b)+"<br/>");
+        document.write((~a)+"<br/>");//-(10+1)=-11(negation)
+        document.write((a^b)+"<br/>");//XOR (15)
+        //<<left shift
+        document.write((a<<1)+"<br/>");
+        document.write((a<<2)+"<br/>");
+        document.write((a<<3)+"<br/>");
+
+        //>>right shift
+        document.write((a>>1)+"<br/>");
+        document.write((a>>2)+"<br/>");
+        document.write((a>>3)+"<br/>");
+    </Script>
+</body>
+</html>

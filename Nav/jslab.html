@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-Data Types</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+        //Datatypes in JavaScript
+        /*8 Types:
+        1.number- integer,float
+        2.string
+        3.boolean
+        4.bigInt()
+        5.undefined
+        6.null
+        7.symbol()
+        8.Object-Obhect,Date(),Math(),Array()*/
+        //1.number-integer,float,exponential
+        var a = 10;
+        document.write(a+"<br>");
+        document.write(typeof(a)+"<br>");
+        //float
+        var b = 2.5;
+        document.write(b+"<br>");
+        document.write(typeof(b)+"<br>");
+        //exponential
+        var c = 1234e5;
+        document.write(c+"<br>");
+        document.write(typeof(c)+"<br>");
+
+        //2.string
+        var e = "sru";
+        var f = "oopjs";
+        document.write(e,f+"<br>");
+        document.write(typeof(e),typeof(f)+"<br>");
+
+        //3.Boolean
+        var g = true;
+        var h = false;
+        document.write(g,h+"<br>");
+        document.write(typeof(g),typeof(h)+"<br>");
+
+        //4.BigInt()
+        var i = BigInt(12458789556562255212);
+        document.write(i+"<br>");
+        document.write(typeof(i)+"<br>");
+
+        //5.undefined
+        var j;
+        document.write(j+"<br>");
+        document.write(typeof(j)+"<br>");
+        var k = undefined;
+        document.write(k+"<br>");
+        document.write(typeof(k)+"<br>");
+
+        //2.Math()
+        var m = new Math();
+        document.write(m.PI+"<br/>");
+        document.write(Math.sqrt(25)+"<br>");
+        document.write(Math.pow(2.5)+"<br>");
+
+        var n = [4,2,1,6];
+        document.write(n[0]+"<br/>");
+        document.write(n[5]+"<br/>");
+        document.write(n[3]+"<br/>");
+        var fruits=["apple","banana","orange","cherry"];
+        document.write(fruits[1]+"<br/>");
+        for(i=0;i<fruits.length;i++){
+            document.write(fruits[i]+"<br/>");
+        }
+    </script>
+</body>
+</html>

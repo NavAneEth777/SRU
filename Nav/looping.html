@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+        /* 5 types of Looping Statement
+        1.While Loop
+        2.for loop
+        3.for-in
+        4.forEach
+        5.do...while()
+        */
+       //1.While loop-Entry Control Statement
+       /*Syntax:
+       initializing;
+       while(condition){
+        statements;
+        incrementation or decrementation;
+       }*/
+       //Example 1:Print n natural numbers
+    //    var num = prompt("enter a number:");
+    //    var i = 1;
+    //    while(i<=num){
+    //     document.write(i);
+    //     i++;
+    //    }
+    //    Example 2: range between 100 to 1000
+    //    var start = prompt("enter a number");
+    //    var end = prompt("Enter a number");
+    //    while(start<=end){
+    //     document.write(start +"<br/>");
+    //     start++;
+    //    }
+          //Example 3: Sum of n natural numbers
+        //   var num = prompt("enter a number:");
+        //   var i = prompt("Enter a number");
+        //   var sum = 0;
+        //   while(i<=num){
+        //     document.write(i);
+        //     sum+=i;
+        //   }
+            //Example 4 : Reverse of a string
+            // var num = prompt("Enter a number:");
+            // var rev = 0;
+            // while(num>0){
+            //     rem = num % 10;
+            //     rev = rev*10+rem;
+            //     num = parseInt(num/10);
+            // }
+            // document.write(rev);
+
+            //2.FOR loop-Control statement
+            /*Syntax:
+            for(initialization; condition;increment/decrement){
+                statemwnt;
+            }
+            */
+           //Example 1: Print 1 to 10 values
+        //    var num = 10;
+        //    var i = 1;
+        //    for(i = 1;i<=num;i++){
+        //     document.write(i +"<br/>");
+        //    }
+           //Example 2: Print 10 to 1 numbers
+        //    var num = 1;
+        //    var i = 10;
+        //    for(i=10; i>=num; i--){
+        //     document.write(i +"<br/>");
+        //    }
+           // Example 3: Given num is Armstrong or not
+        //    var num = prompt("Enter a num:");
+        //    var digits = num.length;
+        //    //document.write(digits);
+        //    var sum = 0;
+        //    var temp = num;
+        //    for(;num>0;){
+        //     rem = num % 10;
+        //     sum = sum+(rem**d);
+        //     num = parseInt(num/10);
+        //    }
+        //    if(temp==sum){
+        //     document.write("Armstrong");
+        //    }
+          
+
+        // //3.Nested for loop
+        // var x = 1;
+        // for(var i = 0;i<4;i++){
+        //     for(j= 0; j<4;j++){
+        //         document.write(x);
+        //         x++;
+        //     }
+        // }
+        
+        // //Printing armstrong number in range
+        //  var start= prompt("Enter a number");
+        //  var end = prompt("Enter a end number");
+        //  for(i = start; i<=end; i++){
+        //     var d = String(i).length;
+        //     // document.write(d);
+        //     var sum =0;
+        //     var temp = i;
+        //     while(temp>0){
+        //         rem = temp%10;
+        //         sum = sum + (rem ** d);
+        //         temp = parseInt(temp/10);
+
+        //     }
+        //     if (sum == i){
+        //         document.write(sum +"<br/>");
+        //     }
+        //  }   
+         
+        //  //Print a given number is strong number  or not;
+        //  var num = prompt("Enter a num:");
+        //  var sum = 0;
+        //  var temp = num;
+        //  while(temp>0){
+        //     rem = temp%10;
+        //     fact = 1;
+        //     for(i=1;i<=rem;i++){
+        //         fact=fact*i;
+        //     }
+        //     sum = sum +fact;
+        //     temp = parseInt(temp/10);
+        //  }
+        //  if(num==sum){
+        //     alert("Strong number");
+        //  }
+
+
+            // // Strong number between 100 to 10000
+            // var start = prompt("Enter a number:");
+            // var end = prompt("Enter end number:");
+            // var sum = 0;
+            // var temp = i;
+            // for(i=start;i<=end;i++){
+            //     while(temp>0){
+            //         rem = temp%10;
+            //         fact = 1;
+            //         for(i=1;i<=rem;i++){
+            //             fact = fact+1;
+            //         }
+            //         sum = sum +fact;
+            //         temp = parseInt(temp/10);
+                
+            //     }
+            //     if(sum == i){
+            //         document.write("Strong number");
+            //     }
+            
+                
+            
+
+            // } 
+            
+            //3.For-in 
+            /* Syntax:
+            for(<control-variable>in Object)
+                {
+                    statements;
+                } */
+            //Example
+            // const student ={
+            //     name:"Rithika",
+            //     rollno:1363,
+            //     section:"K",
+            // };
+            // for(i in student){
+            //     document.write(student[i] + "<br/>");
+            // }
+            
+
+            // // factorial of a given number using do-while
+            // var num = prompt("Enter a number");
+            // var i = 1;
+            // var fact = 1;
+            // do{
+            //     fact *= i;
+            //     i ++;
+            //     document.write(fact+"<br/>")
+
+                 
+            // }while(i<=num);
+            // document.write("factorial of num : " +num+" " +fact);
+
+            //Factors of a given number
+            // var number = prompt("Enter a number: ");
+            // var i = 1;
+            // while (i<=number){
+            //     if (number % i == 0){
+            //         document.write(i+"<br>");
+                
+            //     }i++;
+            // }
+
+            
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+</head>
+<body>
+    <script>
+        // 1. Types of Looping Statements in JavaScript with example programs
+            /*
+                1. for loop
+                2. while loop
+                3. for each
+                4. for in
+                5. do while loop
+            */
+        // for loop
+        for (let i=0; i<2; i++) {
+            document.write(i);
+        }
+        // while loop
+        while (i < 0) {
+            document.write(i);
+            i++;
+        }
+        // for each
+        array.forEach(element => {
+            document.write(element);
+        });
+        // for in
+        for (const key in object) {
+            if (Object.hasOwnProperty.call(object, key)) {
+                const element = object[key];
+                
+            }
+        }
+        // do while loop
+        do {
+            document.write(i);
+        } while (condition);
+
+
+        // 2 problem
+        let sum = 0; // This will hold the sum of all individual digits
+        let number = 100; // Starting number
+        while (number < 1000) {
+            let currentNumber = number;
+            while (currentNumber > 0) {
+                let digit = currentNumber % 10; // Get the last digit
+                sum += digit; // Add it to the sum
+                currentNumber = Math.floor(currentNumber / 10); // Remove the last digit
+            }
+            number++; // Move to the next number
+        }
+
+        document.write(sum);
+
+
+        //3 problem
+        let sum = 0;
+        let tempNumber = 153;
+        const numberOfDigits = number.toString().length;
+        do {
+            let digit = tempNumber % 10;
+            sum += Math.pow(digit, numberOfDigits);
+            tempNumber = Math.floor(tempNumber / 10);
+        } while (tempNumber > 0);
+        document.write(sum === tempNumber);
+
+
+        // 4 problem
+        let num = 12321;
+        let reversedNumber = 0;
+        let remainder;
+        do {
+            remainder = num % 10;
+            reversedNumber = (num / 10);
+        } while (num > 0);
+        if (num === reversedNumber) {
+            document.write(`${num} is a palindrome.`);
+        } else {
+            document.write(`${num} is not a palindrome.`);
+        }
+
+
+        // 5 problem
+        let num = 28;
+        let sum = 0;
+        let curr = 1;
+        while (curr <= num / 2) {
+            if (num % curr === 0) {
+                sum += curr;
+            }
+            curr++;
+        }
+        if (sum === num && num > 0) {
+            console.log(`${num} is a perfect number.`);
+        } else {
+            console.log(`${num} is not a perfect number.`);
+        }
+
+
+        // 6 problem
+        let num = 145;
+        let orig = num;
+        let sum = 0;
+        do {
+            let curr = num % 10;
+            let fact = 1;
+            // Calculate factorial of currentDigit
+            for (let i = 1; i <= curr; i++) {
+                fact *= i;
+            }
+            // Add factorial to sumOfFactorials
+            sum += fact;
+            // Remove the last digit from numberToCheck
+            num = Math.floor(num / 10);
+        } while (num > 0);
+        if (sum === orig) {
+            document.write(`${orig} is a Strong Number.`);
+        } else {
+            document.write(`${orig} is not a Strong Number.`);
+        }
+
+
+        // 7 problem
+        let num = 12345;
+        let rev = 0;
+        while (num > 0) {
+            let lastdigi = num % 10;
+            rev = (rev * 10) + lastdigi;
+            num = Math.floor(num / 10);
+        }
+        document.write(`The reversed number is: ${rev}`);
+
+
+        // 8 problem
+        let number = 5; // Replace with the desired number
+        let factorial = 1;
+        let i = 1;
+        while (i <= number) {
+            factorial *= i;
+            i++;
+        }
+        document.write(factorial);
+
+
+        // 9 problem
+        let num = 17; // Replace with the number you want to check
+        let isPrime = true;
+        let i = 2;
+        while (i < num) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+            
+            i++;
+        }
+        if (isPrime && num > 1) {
+            document.write(`${num} is a prime number.`);
+        } else {
+            document.write(`${num} is not a prime number.`);
+        }
+
+
+        // 10 problem
+        let num = 10; // Replace with the desired number
+        let fibo = [];
+        fibo[0] = 0;
+        fibo[1] = 1;
+        let i = 2;
+        while (fibo[i - 1] <= num) {
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+            i++;
+        }
+        document.write('Fibonacci sequence:');
+        for (let j = 0; j < i - 1; j++) {
+            document.write(fibo[j]);
+        }
+
+
+        // 11 problem
+        let start = 2; // Replace with the starting number
+        let end = 5; // Replace with the ending number
+        for (let i = start; i <= end; i++) {
+            document.write(`Multiplication table for ${i}:`);
+        for (let j = 1; j <= 10; j++) {
+            let result = i * j;
+            document.write(`${i} x ${j} = ${result}`);
+        }
+        document.write('-------------------------');
+        }
+
+
+        //12 problem
+        let start = 100; // Replace with the starting number
+        let end = 1000; // Replace with the ending number
+        console.log(`Armstrong Numbers between ${start} and ${end}:`);
+        for (let num = start; num <= end; num++) {
+            let sum = 0;
+            let curr = num;
+            let digitCount = String(num).length;
+            while (curr > 0) {
+                let digit = curr % 10;
+                sum += Math.pow(digit, digitCount);
+                curr = Math.floor(curr / 10);
+            }
+            if (sum === num) {
+                console.log(num);
+            }
+        }
+
+
+        // 13 problem
+        //break
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                break;
+            }
+            console.log(i);
+        }
+        //continue
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                continue;
+            }
+            console.log(i);
+        }
+
+
+        //14 problem
+        let rows = 6; // Replace with the number of rows
+        for (let i = 1; i <= rows; i++) {
+            let pattern = '';
+            for (let j = 1; j <= i; j++) {
+                pattern += j.toString() + ' ';
+            }
+            document.write(pattern);
+        }
+
+
+        //15 problem
+        let rows = 5; // Replace with the number of rows
+        for (let i = rows; i >= 1; i--) {
+            let pattern = '';
+            for (let j = 1; j <= i; j++) {
+                pattern += j.toString() + ' ';
+            }
+            document.write(pattern);
+        }
+
+
+        //16 problem
+        let rows = 2; // Replace with the number of rows
+        for (let i = 1; i <= rows; i++) {
+            let pattern = '';
+            for (let j = 1; j <= rows - i; j++) {
+                pattern += ' ';
+            }
+            for (let k = 1; k <= i; k++) {
+                pattern += '* ';
+            }
+            document.write(pattern);
+        }
+
+
+        //17 problem
+        let n = 10; // Replace with your desired number
+        let sum = 0;
+        let factorial = 1;
+        let count = 1;
+        do {
+            // Calculate the sum
+            sum += count;
+            // Calculate the factorial
+            factorial *= count;
+            count++;
+        } while (count <= n);
+        document.write("Sum:", sum);
+        document.write("Factorial:", factorial);
+
+
+        //18 problem
+        let person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        for (let property in person) {
+            document.write(property + ": " + person[property]);
+        }
+    </script>
+</body>
+</html>

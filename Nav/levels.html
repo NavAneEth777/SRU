@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVELS in JS</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+        class animal{
+            constructor(){
+                this.a_name = "Wild Animal";
+                this.a_type = "Dog";
+            }
+            a_display(){
+                document.write("I am a animal class:"+this.a_name + " " + this.a_type +"<br/>" );
+            }
+        }
+        class dog extends animal{
+            constructor(){
+                super();
+                this.d_name = "Puppy";
+                this.d_year = 8;
+            }
+            d_display(){
+                document.write("I am a dog class:"+ this.d_name + " "+this.d_year + "<br/>");
+            }
+        }
+        //Creating an object for Dog class
+        var d = new dog();
+        document.write("Parent class:",d.a_name + " "  + "<br/>"+ d.a_type + "<br/>" );
+        document.write("Child class:",d.d_name + " " +"<br/>" + d.d_year + "<br/>");
+        d.a_display();
+        d.d_display();
+
+        //Multilevel inheritance
+        class gparent{
+            constructor(){
+                this.g_name = "Srec";
+                this.g_year = 2000;
+            }
+            g_display(){
+                document.write("I am grand parent class:" + this.g_name +"<br/>" + this.g_year + "<br/>");
+            }
+        }
+        class fparent extends gparent{
+            constructor(){
+                super();
+                this.f_name = "Sriit";
+                this.f_year = 2015;
+            }
+            f_display(){
+                document.write("I am father class:" + this.f_name + "<br/>" + this.f_year + "<br/>");
+            }
+        }
+        class child extends fparent{
+            constructor(){
+                super();
+                this.c_name = "Sru";
+                this.c_year = 2024;
+            }
+            c_display(){
+                document.write("I am child class:" + this.c_name + "<br/>" + this.c_year + "<br/>");
+            }
+        }
+        var c = new child();
+        document.write("grandparent class:" + c.g_name + "<br/>" + c.g_year + "<br/>");
+        document.write("father class:" + c.f_name + "<br/>" + c.f_year + "<br/>");
+        document.write("child class:" + c.c_name + "<br/>" + c.c_year + "<br/>");
+        c.g_display();
+        c.f_display();
+        c.c_display();
+
+        // Heirarchical level inheritance
+        class mother{
+            constructor(){
+                this.m_name = " Srit";
+            }
+            m_display(){
+                document.write("I am mother class:" + this.m_name + "<br/>");
+            }
+        }
+        class child1 extends mother{
+            constructor(){
+                super();
+                this.c1_name = "Sriit";
+            }
+            c1_display(){
+                document.write("I am child1 class:" + this.c1_name + "<br/>");
+            }
+        }
+        class child2 extends mother{
+            constructor(){
+                super();
+                this.c2_name = "Sru";
+            }
+            c2_display(){
+                document.write("I am child2 class:" + this.c2_name + "<br/>");
+            }
+        }
+        var c1 = new child1();
+        document.write("Mother class:" + c1.m_name + "<br/>");
+        document.write("Child1 class:" + c1.c1_name + "<br/>");
+        c1.m_display();
+        c1.c1_display();
+
+        var c2 = new child2();
+        document.write("Mother class:" + c2.m_name + '<br/>');
+        document.write("Child2 class:" + c2.c2_name + "<br/>");
+        c2.m_display();
+        c2.c2_display();
+
+        // Hybrid level
+        class g1parent{
+            constructor(){
+                this.g1_name = "Srec";
+            }
+            g1_display(){
+                document.write("I am grand parent class:"+ this.g1_name + '<br/>');
+            }
+        }
+        class f1parent extends g1parent{
+            constructor(){
+                super();
+                this.f1_name = "Srit";
+            }
+            f1_display(){
+                document.write(" I am father class:" + this.f1_name + "<br/>");
+            }
+        }
+        class daughter extends f1parent{
+            constructor(){
+                super();
+                this.d_name = "Sru";
+            }
+            d_display(){
+                document.write("I am daughter class:"+ this.d_name + "<br/>");
+            }
+        }
+        class son extends f1parent{
+            constructor(){
+                super();
+                this.s_name = "Sriit";
+            }
+            s_display(){
+                document.write("I am son class:"+ this.s_name + "<br/>");
+            }
+        }
+
+        var d1 = new daughter();
+        document.write(d1.g1_name + "<br/>");
+        document.write(d1.f1_name + "<br/>");
+        document.write(d1.d_name + "<br/>");
+        d1.g1_display();
+        d1.f1_display();
+        d1.d_display();
+        var s1 = new son();
+        document.write(s1.g1_name + "<br/>");
+        document.write(s1.f1_name + "<br/>");
+        document.write(s1.s_name + "<br/>");
+        s1.g1_display();
+        s1.f1_display();
+        s1.s_display();
+    </script>
+</body>
+</html>

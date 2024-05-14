@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript" type="text/JavaScript">
+class personal{
+        name = "Rithika";
+        college = "Sru";
+        course = "OOPJS";
+        roll_no = 1363;
+        display(){
+            alert("Welcome Rithika");
+        }
+        show(){
+            alert("All the best for course OOPJS");
+        }
+    }
+var p = new personal();
+document.write(p.name + "<br/>");
+document.write(p.course + "<br/>");
+document.write(p.roll_no + "<br/>");
+p.display();
+p.show();
+p.show();
+      /* Constructor
+      constructor is a default method for class */
+class person{
+    constructor(){
+        alert("I am a constructor");
+    }
+}
+var p1= new person();
+
+
+// This keyword
+class arithmetic{
+    //var a = 10;
+    //var b = 20;
+    constructor(x,y){
+        this.a = x;
+        this.b = y;
+        alert(x-y);
+    }
+}
+var arith = new arithmetic(2,3);
+
+    </script>
+</body>
+</html>

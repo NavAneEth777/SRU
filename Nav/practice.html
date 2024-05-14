@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <table border="2" style="background-color: orange;">
+        <form action="">
+            <caption>STUDENT REGISTRATION FORM</caption>
+            <tr>
+                <td>FIRST NAME:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>LAST NAME:</td>
+                <td><input type="text"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>EMAIL ID:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER:</td>
+                <td><input type="text" maxlength="10" onkeydown="return /[0-9]/i.test(event.key)"></td>
+            </tr> 
+            <tr>
+                <td>GENDER:</td>
+                <td>
+                    <input type="radio" name="gender" value="m" >Male
+                    <input type="radio" name="gender" value="f" >Female
+                </td>
+            </tr>
+            <tr>
+                <td>ADDRESS:</td>
+                <td><textarea name="" id="" cols="35" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY:</td>
+                <td><input type="text"onkeydown="return /[a-zA-Z]/i.test(event.key)" maxlength="30"></td>
+            </tr>
+            <tr>
+                <td>PIN CODE:</td>
+                <td><input type="text"onkeydown="return /[0-9]/i.test(event.key)" maxlength="6"></td>
+            </tr>
+            <tr>
+                <td>STATE:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>COUNTRY:</td>
+                <td><input type="text" maxlength="30" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr>
+                <td>HOBBIES:</td>
+                <td>
+                    <input type="checkbox">Drawing
+                    <input type="checkbox">Singing
+                    <input type="checkbox">Dancing
+                    <input type="checkbox">Sketching
+                    <input type="checkbox">Others
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>QUALIFICATION:</td>
+                <td>
+                    <table border="2">
+                        <tr>
+                            <th>SI.No</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Masters</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>COURSES APPLIED FOR:</td>
+                <td>
+                    <input type="radio" name="crs">B.Tech
+                    <input type="radio" name="crs">Agriculture
+                    <input type="radio" name="crs">M.B.A
+                    <input type="radio" name="crs">M.Tech
+                    <input type="radio" name="crs">PhD
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center"><button>Submit</button>
+                    <button>Reset</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

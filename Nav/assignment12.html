@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment- 12</title>
+</head>
+<body>
+    <!-- 1. Write a JavaScript program to demonstrate Document Objects?  -->
+    <!--Four Types of Document Objects
+    1.document.getElementById()
+    2.document.getElementByName()
+    3.document.getElementByClassName()
+    4.document.getElementByTagName()-->
+    <p id="demo">SRU</p>
+    <script language="Javascript" type="text/Javascript">
+        document.getElementById("demo").innerHTML = "OOPJS";
+    </script>
+    <!--Event-->
+    <p id="p2">p2</p>
+    <button onClick = "document.getElementById('p2').innerHTML = alert('Rithika')">Click Here</button>
+
+    <p id="p3">p3</p>
+    <label for="name" id="name">Name:</label>
+    <input type="text" id=" name">
+    <button on click = "document.getElementById('p3').innerHTML = alert('Saivarsha')" >Submit</button>
+</body>
+</html>
+
+
+<!-- 2. Write a JavaScript program to demonstrate Event Handling Methods? -->
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handling Methods</title>
+        <script language="javascript" type="text/javascript">
+            /* Event Handling Methods
+            1. onClick
+            2. onLoad
+            3. onChange
+            4. onMouseOver
+            5. onMouseOut
+            6. onKeyPress
+            7. onKeyUp
+            8. onKeyDown 
+            etc...
+            */
+            //onLoad() Event
+            function welcome()
+            {
+                alert("Welcome to JavaScript Programming");
+            }
+            //onClick() Event
+            function message()
+            {
+                document.getElementById("p1").innerHTML = "Welcome to SR University";
+            }
+            //onChange() Event
+            function course()
+            {
+                var c = document.getElementById("course").value;
+                document.getElementById("p2").innerHTML = "You Selected Course:" +c;
+            }
+            //onKeyPress() Event
+            function k_press()
+            {
+                alert("You are Typing in Text Box");
+                document.getElementById("p4").innerHTML = 
+                "You are Typing in Text Box";
+            }
+            //onKeyUp() Event
+            function up_press()
+            {
+                var u = document.getElementById("txt2");
+                u.value = u.value.toUpperCase();
+            }
+        
+            //onKeyDown() Event
+            function down_press()
+            {
+                var d = document.getElementById("txt3");
+                d.value = d.value.toLowerCase();
+            }
+        </script>
+    </head>
+    <body onLoad = "welcome()">
+        <p id="p1"></p>
+        <button onClick="message()">Click Here</button><br/>
+        <p id = "p2"></p>
+        Select a Course:
+        <select id="course" class="course" onChange="course()">
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+        </select>
+        <!-- Mouse Events -->
+        <p id = "p3">SRU</p>
+        <h1 onMouseOver="document.getElementById('p3').innerHTML =
+        'Welcome to SR University'">Message1</h1>
+        <h1 onMouseOut="document.getElementById('p3').innerHTML = 
+        'Welcome to OOPJS'">Message2</h1>
+
+        <!-- Keyboard Events -->
+        <p id = "p4"></p>
+        First Name: <input type="text" id="txt1" onKeyPress="k_press()"><br/>
+        Last Name: <input type="text" id="txt2" onKeyUp="up_press()"><br/>
+        Middle Name: <input type="text" id="txt3" onKeyDown="down_press()"><br/>
+    </body>
+</html>
+
+<!-- 3. Create a page to perform mathematical operations like (+,-,*,/,%,**) using two text boxes
+and display the result in another text box. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input {
+            padding: 5px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        button {
+            padding: 7px;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function performOperation() {
+            // Get the values from the text boxes
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operation = document.getElementById("operation").value;
+
+            var result;
+
+            // Perform the operation based on the selected option
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        result = 'Cannot divide by zero';
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+                case '%':
+                    result = num1 % num2;
+                    break;
+                case '**':
+                    result = Math.pow(num1, num2);
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+
+            // Display the result in the result box
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Math Operations</h2>
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
+
+        <select id="operation">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+            <option value="%">Modulo (%)</option>
+            <option value="**">Exponentiation (**)</option>
+        </select>
+
+        <button onclick="performOperation()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>
+
+<!-- 4. Develop a javascript program to design Calculator and perform all the mathematical
+operations as shown below:-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .calculator {
+            width: 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        .display {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .buttons button {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #f0f0f0;
+        }
+        .buttons button.operator {
+            background: #ff7f50;
+            color: #fff;
+        }
+        .buttons button.clear {
+            background: #ff4500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('/')">/</button>
+            
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('*')">*</button>
+            
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('-')">-</button>
+            
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="calculateResult()">=</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+        </div>
+    </div>
+    
+    <script>
+        function appendValue(value) {
+            var display = document.getElementById("display");
+            display.value += value;
+        }
+        
+        function clearDisplay() {
+            var display = document.getElementById("display");
+            display.value = '';
+        }
+        
+        function calculateResult() {
+            var display = document.getElementById("display");
+            try {
+                var result = eval(display.value);
+                if (isNaN(result) || !isFinite(result)) {
+                    throw new Error('Invalid Operation');
+                }
+                display.value = result;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- 5. Create Registration form containing the fields
+Name, Username, Password validate the form, user confirm box showing the message that "do
+you really want to continue" , if you press ok the message should be displayed as "Entered
+details are correct" , if press cancel the message should be displayed as " ReEnter the details"? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #218838;
+        }
+        .message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var username = document.getElementById("username").value.trim();
+            var password = document.getElementById("password").value.trim();
+
+            if (name === "" || username === "" || password === "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters.");
+                return false;
+            }
+
+            // Show confirmation box
+            var confirmed = confirm("Do you really want to continue?");
+            if (confirmed) {
+                document.getElementById("message").textContent = "Entered details are correct";
+            } else {
+                document.getElementById("message").textContent = "Re-enter the details";
+            }
+
+            return false; // Prevent form submission for demonstration purposes
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+</body>
+</html>
+
+<!-- 6. Develop a Login form containing the fields
+Username, Password validate the form, if your entered username and password matches with
+your predefined values, print “Authorized User” else Print “Un Authorized User” -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 300px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #0056b3;
+        }
+        .message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function validateLogin() {
+            // Predefined username and password
+            const predefinedUsername = "admin";
+            const predefinedPassword = "password123";
+
+            // Get entered values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Message container
+            const messageElement = document.getElementById("message");
+
+            if (username === predefinedUsername && password === predefinedPassword) {
+                messageElement.textContent = "Authorized User";
+                messageElement.style.color = "green";
+            } else {
+                messageElement.textContent = "Unauthorized User";
+                messageElement.style.color = "red";
+            }
+
+            return false; // Prevent form submission for demonstration purposes
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login Form</h2>
+        <form onsubmit="return validateLogin()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+</body>
+</html>
+
+<!-- 7. Write a JavaScript program to demonstrate Exception Handling with Examples (divide
+by Zero Error) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exception Handling in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .result {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        // Function to divide two numbers with exception handling
+        function divide(a, b) {
+            try {
+                // Check for division by zero
+                if (b === 0) {
+                    throw new Error("Division by zero is not allowed.");
+                }
+                // Return the division result
+                return a / b;
+            } catch (error) {
+                console.error(error); // Log the error to the console
+                return error.message; // Return the error message
+            }
+        }
+
+        function demonstrateDivision() {
+            // Examples of division operations
+            const a = parseFloat(document.getElementById("numerator").value);
+            const b = parseFloat(document.getElementById("denominator").value);
+
+            const result = divide(a, b); // Get the result or error message
+            document.getElementById("result").textContent = result; // Display the result or error message
+        }
+
+    </script>
+</head>
+<body>
+    <h2>JavaScript Exception Handling: Divide by Zero</h2>
+    <div>
+        <label for="numerator">Numerator:</label>
+        <input type="number" id="numerator" placeholder="Enter a number">
+    </div>
+    <div>
+        <label for="denominator">Denominator:</label>
+        <input type="number" id="denominator" placeholder="Enter a number">
+    </div>
+    <button onclick="demonstrateDivision()">Divide</button>
+
+    <div class="result" id="result">Result will be displayed here</div>
+</body>
+</html>
+
+<!-- 8. Write a JavaScript Program to Read a list Dynamically and retrieve the element which is
+not there in the Array with index, Handle the list index out of range exception -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Index Out of Range Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        .message {
+            font-weight: bold;
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        let dynamicList = []; // List to store dynamic elements
+
+        // Function to add an element to the list
+        function addElement() {
+            const inputElement = document.getElementById("newElement").value.trim();
+            if (inputElement) {
+                dynamicList.push(inputElement);
+                document.getElementById("listDisplay").textContent = dynamicList.join(", ");
+                document.getElementById("newElement").value = ''; // Clear the input field
+            } else {
+                alert("Please enter a value to add.");
+            }
+        }
+
+        // Function to retrieve an element by index
+        function retrieveElement() {
+            const index = parseInt(document.getElementById("elementIndex").value, 10);
+            const messageElement = document.getElementById("message");
+
+            try {
+                if (isNaN(index)) {
+                    throw new Error("Index must be a valid number.");
+                }
+
+                if (index < 0 || index >= dynamicList.length) {
+                    throw new Error(`Index ${index} is out of range.`);
+                }
+
+                const element = dynamicList[index]; // Access the element
+                messageElement.textContent = `Element at index ${index} is "${element}".`;
+                messageElement.style.color = "green"; // Set text color for valid result
+            } catch (error) {
+                messageElement.textContent = error.message;
+                messageElement.style.color = "red"; // Set text color for error
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Dynamic List with Index Handling</h2>
+        <div>
+            <label for="newElement">Add Element:</label>
+            <input type="text" id="newElement" placeholder="Enter element">
+            <button onclick="addElement()">Add</button>
+        </div>
+        <div>
+            <label>Current List:</label>
+            <span id="listDisplay">Empty</span>
+        </div>
+        <div>
+            <label for="elementIndex">Retrieve Element at Index:</label>
+            <input type="number" id="elementIndex" placeholder="Enter index">
+            <button onclick="retrieveElement()">Retrieve</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+</body>
+</html>
+
+<!-- 9. Write a JavaScript Program to demonstrate Types of errors with Example? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Error Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function demonstrateSyntaxError() {
+            try {
+                // Syntax error: Missing closing parenthesis
+                eval("var x = 10; console.log(x"); // This will cause a syntax error
+            } catch (error) {
+                console.log("Syntax Error:", error.message); // Handle syntax error
+            }
+        }
+
+        function demonstrateRuntimeError() {
+            try {
+                // Runtime error: Undefined variable
+                console.log(y); // 'y' is not defined, causing a runtime error
+            } catch (error) {
+                console.log("Runtime Error:", error.message); // Handle runtime error
+            }
+        }
+
+        function demonstrateLogicalError() {
+            try {
+                // Logical error: Incorrect logic leading to wrong results
+                var result = 5 + "5"; // Concatenation instead of addition (expected 10, but gets "55")
+                console.log("Logical Error: Expected 10, got", result);
+            } catch (error) {
+                console.log("Logical Error:", error.message); // Logical errors generally don't throw exceptions
+            }
+        }
+
+        function demonstrateErrors() {
+            demonstrateSyntaxError();
+            demonstrateRuntimeError();
+            demonstrateLogicalError();
+        }
+
+    </script>
+</head>
+<body>
+    <h2>JavaScript Error Demonstrations</h2>
+    <button onclick="demonstrateErrors()">Run Error Demonstrations</button>
+</body>
+</html>
+
+<!-- 10. Write a Javascript Program for the following Design -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Pattern Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .pattern {
+            font-size: 24px;
+            text-align: center;
+            white-space: pre-line;
+        }
+    </style>
+    <script>
+        function generateLetterPattern() {
+            const startCharCode = 'A'.charCodeAt(0); // ASCII code for 'A'
+            let currentCharCode = startCharCode;
+            let result = "";
+            let rows = 7;
+
+            // Generate the pattern
+            for (let i = 1; i <= rows; i++) {
+                let line = "";
+
+                // Add characters to the current line
+                for (let j = 0; j < i; j++) {
+                    line += String.fromCharCode(currentCharCode) + " ";
+                    currentCharCode++;
+                }
+
+                // Append the line to the result
+                result += line.trim() + "\n"; // Trim trailing spaces and add newline
+            }
+
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <div class="pattern">
+        <!-- Generate and display the pattern -->
+        <script>
+            document.write(generateLetterPattern());
+        </script>
+    </div>
+</body>
+</html>

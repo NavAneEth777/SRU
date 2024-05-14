@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 10</title>
+</head>
+<body>
+    <script>
+        //1. Define is Object and what are the Types of Objects in Javascript?
+        const person = {
+            name: 'John',
+            age: 30
+        };
+        const numbers = [1, 2, 3, 4, 5];
+        const currentDate = new Date();
+
+
+        //2. Write a program to demonstrate User-defined Object?
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.greet = function() {
+        document.write(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+        };
+        const person1 = new Person('John', 30);
+        const person2 = new Person('Jane', 25);
+        document.write(person1.name); 
+        document.write(person2.age);
+        person1.greet();
+        person2.greet();
+
+
+        //3. Write a javascript program to demonstrate Number Object?
+        const num1 = new Number(5);
+        const num2 = 10;
+        document.write(num1.valueOf()); 
+        document.write(num2.toString()); 
+        document.write(Number.MAX_VALUE);
+        document.write(Number.MIN_VALUE);
+        document.write(Number.NaN); 
+        const x = 10;
+        const y = 20;
+        document.write(Number.isInteger(x)); 
+        document.write(Number.isFinite(y)); 
+        document.write(Number.isNaN('abc'));
+        document.write(Number.parseFloat('3.14')); 
+        document.write(Number.parseInt('42'));
+
+
+        //4. Write a javascript program to demonstrate Boolean Object?
+        const bool1 = new Boolean(true);
+        const bool2 = false;
+        document.write(bool1.valueOf()); 
+        document.write(bool2.toString());
+        const x = 5;
+        const y = 10;
+        document.write(x > y);
+        document.write(Boolean(x > y));
+        document.write(Boolean(x < y));
+
+
+        //5. Write a javascript program to demonstrate String Objects?
+        const str1 = new String("Hello");
+        const str2 = "World";
+        document.write(str1.valueOf()); 
+        document.write(str2.toString()); 
+        const mesg = str1.concat(" ", str2);
+        document.write(mesg);
+        document.write(mesg.toUpperCase()); 
+        document.write(mesg.includes("lo"));
+        document.write(str1.length);
+        document.write(str2.length);
+
+
+        //6. Write a javascript program to demonstrate Array?
+        const array1 = new Array(); 
+        const array2 = ["apple", "banana", "orange"];
+        document.write(array1.length);
+        document.write(array2.toString());
+
+
+        //7. Write a javascript program to read and print matrix elements dynamically?
+        const rows = parseInt(prompt("rows:"));
+        const cols = parseInt(prompt("cols:"));
+        const matrix = [];
+        for (let i = 0; i < rows; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < cols; j++) {
+                matrix[i][j] = parseInt(prompt(`Enter the element at position [${i + 1}][${j + 1}]:`));
+            }
+        }
+        document.write("Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < cols; j++) {
+                rowStr += matrix[i][j] + " ";
+            }
+            document.write(rowStr.trim());
+        }
+
+
+        /*8. Write a javascript program to read and print matrix elements dynamically?
+        1. Print Transpose of Matrix
+        2. Print Diagonal Elements & Sum of Diagonal Elements
+        3. Print Upper Triangle Matrix
+        4. Print Lower Triangle Matrix */
+        const rows = parseInt(prompt("Enter the number of rows:"));
+        const columns = parseInt(prompt("Enter the number of columns:"));
+        const matrix = [];
+        for (let i = 0; i < rows; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix[i][j] = parseInt(prompt(`Enter the element at position [${i + 1}][${j + 1}]:`));
+            }
+        }
+        console.log("Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < columns; j++) {
+                rowStr += matrix[i][j] + " ";
+            }
+            console.log(rowStr.trim());
+        }
+        console.log("Transpose of Matrix:");
+        const transposeMatrix = [];
+        for (let i = 0; i < columns; i++) {
+            transposeMatrix[i] = [];
+            for (let j = 0; j < rows; j++) {
+                transposeMatrix[i][j] = matrix[j][i];
+            }
+        }
+        for (let i = 0; i < columns; i++) {
+            let rowStr = "";
+            for (let j = 0; j < rows; j++) {
+                rowStr += transposeMatrix[i][j] + " ";
+            }
+            console.log(rowStr.trim());
+        }
+        console.log("Diagonal Elements:");
+        let sumOfDiagonal = 0;
+        for (let i = 0; i < rows; i++) {
+            console.log(matrix[i][i]);
+            sumOfDiagonal += matrix[i][i];
+        }
+        console.log("Sum of Diagonal Elements:", sumOfDiagonal);
+        console.log("Upper Triangle Matrix:");
+        for (let i = 0; i < rows; i++) {
+            let rowStr = "";
+            for (let j = 0; j < columns; j++) {
+                rowStr += (j < i ? " " : matrix[i][j]) + " ";
+            }
+        }
+
+
+        //9. Write a javascript program for addition of two Matrix elements dynamically?
+        const rows = parseInt(prompt("Enter the number of rows:"));
+        const columns = parseInt(prompt("Enter the number of columns:"));
+        const matrix1 = [];
+        console.log("Enter elements for Matrix 1:");
+        for (let i = 0; i < rows; i++) {
+            matrix1[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix1[i][j] = parseInt(
+                prompt(`Enter the element at position [${i + 1}][${j + 1}] of Matrix 1:`)
+                );
+            }
+        }
+        const matrix2 = [];
+        console.log("Enter elements for Matrix 2:");
+        for (let i = 0; i < rows; i++) {
+            matrix2[i] = [];
+            for (let j = 0; j < columns; j++) {
+                matrix2[i][j] = parseInt(
+                prompt(`Enter the element at position [${i + 1}][${j + 1}] of Matrix 2:`)
+                );
+            }
+        }
+        const sumMatrix = [];
+        for (let i = 0; i < rows; i++) {
+            sumMatrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        console.log("Matrix 1:");
+        printMatrix(matrix1);
+        console.log("Matrix 2:");
+        printMatrix(matrix2);
+        console.log("Sum of Matrices:");
+        printMatrix(sumMatrix);
+        function printMatrix(matrix) {
+            for (let i = 0; i < rows; i++) {
+                let rowStr = "";
+                for (let j = 0; j < columns; j++) {
+                rowStr += matrix[i][j] + " ";
+                }
+                console.log(rowStr.trim());
+            }
+        }
+
+
+        //10. Write a javascript program for Substraction of two Matrix elements dynamically?
+        const differenceMatrix = [];
+        for (let i = 0; i < rows; i++) {
+            differenceMatrix[i] = [];
+            for (let j = 0; j < columns; j++) {
+                differenceMatrix[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+
+        //11. Write a javascript program for Multiplication of two Matrix elements dynamically?
+        const productMatrix = [];
+        for (let i = 0; i < rows1; i++) {
+            productMatrix[i] = [];
+            for (let j = 0; j < columns2; j++) {
+                productMatrix[i][j] = 0;
+                for (let k = 0; k < columns1; k++) {
+                productMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+       //1. If syntax
+        const a = 5;
+        const b = 10;
+        if(b%a == 0){
+            document.write("Multiple of 5" +"<br/>");
+        }
+
+       //2.If else syntax
+        const c = Number(prompt("Enter a value of c:"));
+        const d = Number(prompt("Enter a value of d:"));
+        if (c>=d) {
+        document.write ("c is a bigger number");
+        }
+        else{
+        document.write("d is a bigger number" +"<br/>");
+        }
+
+        // 3. Write a program for greatest of Two Numbers using Ternary Operation
+        let x = prompt("enter a: ");
+        let y = prompt("enter b:");
+        x > y ? document.write("a is bigger than b", x):document.write("b is Big:",y)
+
+        4. Write the syntax for Nested if and Write a program to demonstrate Nested if
+        let age = prompt('age: ');
+        if (age > 0) {
+            document.write("Happy birthday!");
+            if (age <18 && age >=13) {
+                document.write("teenage!");
+            }
+            if (age > 18) {
+                document.write("adult");
+            } 
+        }
+
+        5. Write the syntax for elif ladder and Write a program to demonstrate elif Ladder
+        let age1 = prompt("age: ");
+        if (age1 < 0) {
+            document.write("not born");
+        } elif (age1 > 0) {
+            document.write("you born");
+        } elif (age1 > 18) {
+            document.write("adult u can apply license");
+        } else {
+            ddocument.write("sorry! not eligible..");
+        }
+
+       //6.Eligible for Vote or not
+        const e = Number(prompt("Enter a age:"));
+        if (e >= 18){
+            document.write("You are eligible to vote");
+        }
+        else{
+            document.write("You are not eligible to vote" + "<br/>");
+        }
+
+        //7.even or not
+        const f = Number(prompt("Enter a number:"));
+        if (f % 2 == 0){
+            document.write("Given number is even");
+        }
+        else{
+            document.write("Given number is odd"+ "<br/>");
+        }
+
+        //8.divisible by 7 0r not
+        const g = Number(prompt("Enter a number:"));
+        if (g % 7 == 0){
+            document.write("Given number is divisible by 7");
+        }
+        else{
+            document.write("Given number is not divisible by 7"+ "<br/>");
+        }
+
+        // 9. Multiple of 5
+        const h = Number(prompt("Enter a number:"));
+        if(h % 5 == 0){
+            document.write("Welcome to JavaScript Programming");
+        }else{
+            document.write("Bye");
+        }
+
+        // 10. Write a program to display the last digit of a given number
+        let num = prompt("enter a number: ");
+        document.write(num %10);
+
+        // 11. Write a program to check whether the last digit of a number (entered by user) is divisible by 3 or not?
+        let num = prompt("enter a number: ");
+        lastDigit = num % 10;
+        if (lastDigit % 3 == 0) {
+            document.write("divisible by 3");
+        } else {
+            document.write("not divisible by 3");
+        }
+
+        //    //12.Positive negative or zero
+        const h = Number(prompt("Enter a value of h:"));
+        if(h>=0){
+            if(h>0){
+                document.write("Positive number");
+            }else{
+                document.write("Zero");
+            }
+        }else{
+            document.write("Negative number");
+        }
+              //13.even or not
+        const f = Number(prompt("Enter a number:"));
+        if (f % 2 == 0){
+            document.write("Given number is even");
+        }
+        else{
+            document.write("Given number is odd"+ "<br/>");
+        }
+            
+        //14. Write a program to check whether the given year is leap year or not?
+        let year = prompt("enter year: ");
+        if (year % 4 == 0) {
+            document.write("leap year");
+        } else {
+            document.write("it is not aleap year");
+        }
+
+           // 15. Switch case
+        const day = Number(prompt("Enter a value of day:"));
+        switch(day){
+            case 1 :
+                document.write("Monday");
+            case 2 :
+                document.write("Tuesday");
+            case 3 :
+                document.write("Wednesday");
+                break;
+            case 4 :
+                document.write("Thursday");
+            case 5 :
+                document.write("Friday");
+            case 6 :
+                document.write("Saturday");
+            case 7 :
+                document.write("Sunday");
+        }
+
+        //16.Greatest of three numbers
+        const i = Number(prompt("Enter a value of i:"));
+        const j = Number(prompt("Enter a value of i:"));
+        const k = Number(prompt("Enter a value of i:"));
+        if(i>j&&k){
+        document.write("i is greatest number");
+        }
+        else if(j>i&&k){
+        document.write("j is greatest number");
+        }
+        else{
+            document.write("k is greatest number");
+        }
+
+        //17.Operators
+        const l = Number(prompt("Enter a value of l:"));
+        const m = Number (prompt("Enter a value of m:"));
+        
+        document.write(l+m)
+        
+        18. Accept 3 numbers from the user and display second Largest Number
+        let a = prompt("a:");
+        let b = prompt("b:");
+        let c = prompt("c:");
+        if (a > b && a < c) {
+            document.write("a is second largest number");
+        } elif (b > a && b < c) {
+            document.write("b is second largest number");
+        } else {
+            document.write("c is second largest number");
+        }
+
+        19. electricity bill
+        let bill = prompt("unit charge: ");
+        if (bill < 50) {
+            document.write((bill * 0.50) + ((bill / 100) * 20));
+        } elif (bill > 50) {
+            document.write((bill * 0.75) + ((bill / 100) * 20));
+        } elif (bill > 100) {
+            document.write((bill * 1.20) + ((bill / 100) * 20));
+        } elif (bill > 250) {
+            document.write((bill * 1.50) + ((bill / 100) * 20));
+        } else {
+            document.write("Invalid output!!");
+        }
+
+            20. triangle
+        let a = prompt("a: ");
+        let b = prompt("b: ");
+        let c = prompt("c: ");
+        if ((a+b) > c || (b+c) > a || (c+a) > b) {
+            document.write("triangle");
+            if ((a==b) || (b==c) || (c==a)) {
+                document.write("it is an isosceles triangle");
+            }
+        } else {
+            document.write("not a triangle");
+        }
+
+            21. bonus for retirement
+        let amount = prompt("amount: ");
+        let service = prompt("service: ");
+        if (service < 5) {
+            document.write("Total Retirement Bonus:", (amount + 0));
+        } elif (service >= 5) {
+            document.write("Total Retirement Bonus:", (amount + ((amount / 100) * 5)));
+        } elif (service >= 10) {
+            document.write("Total Retirement Bonus:", (amount + ((amount / 100) * 10)));
+        } elif (service >= 20) {
+            document.write("Total Retirement Bonus:", (amount + ((amount / 100) * 20)));
+        } else {
+            return 0;
+        }
+            
+            22. student grade
+        let a = prompt("sub1: ");
+        let b = prompt("sub2: ");
+        let c = prompt("sub3: ");
+        let avg = (a + b + c) / 3;
+        if (a, b, c > 50) {
+            if (avg == 100) {
+                document.write("Outstanding");
+            }
+            if (avg < 100 && avg > 90) {
+                document.write("A+");
+            }
+            if (avg < 89 && avg > 80) {
+                document.write("A");
+            }
+            if (avg < 79 && avg > 70) {
+                document.write("B+");
+            }
+            if (avg < 69 && avg > 60) {
+                document.write("B");
+            }
+            if (avg < 59 && avg > 50) {
+                document.write("C");
+            }
+            if (avg < 50) {
+                document.write("Fail");
+            }
+        }
+
+            23. calculator
+        let num1 = prompt("enter num1: ");
+        let num2 = prompt("enter num2: ");
+        let operator = prompt("enter operator: ");
+        let result;
+        switch(operator) {
+            case 'add':
+                result = num1 + num2;
+                document.write(result);
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                document.write(result);
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                document.write(result);
+                break;
+            case 'divide':
+                result = num1 / num2;
+                document.write(result);
+                break;
+            default:
+                result = "Invalid operator";
+                document.write(result);
+        }
+
+        24. day
+        let dayName = prompt("enter date:");
+        switch(dayName) {
+            case 1:
+                document.write("Monday");
+                break;
+            case 2:
+                document.write("Tuesday");
+                break;
+            case 3:
+                document.write("Wednesday");
+                break;
+            case 4:
+                document.write("Thursday");
+                break;
+            case 5:
+                document.write("Friday");
+                break;
+            case 6:
+                document.write("Saturday");
+                break;
+            case 7:
+                document.write("Sunday");
+                break;
+            default:
+                document.write("Invalid day");
+        }
+
+        //25. time table
+        let dayName = prompt("enter date:");
+        switch(dayName) {
+            case 1:
+                document.write("9to11(lab)");
+                break;
+            case 2:
+                document.write("11 to 1 (lab),3 to 4(theory)");
+                break;
+            case 3:
+                document.write("no class");
+                break;
+            case 4:
+                document.write("1 to 3(lab)");
+                break;
+            case 5:
+                document.write("9 to 10(theory)");
+                break;
+            case 6:
+                document.write("holiday");
+                break;
+            case 7:
+                document.write("holiday");
+                break;
+            default:
+                document.write("Invalid day");
+        }
+
+    </script>
+</body>
+</html>
