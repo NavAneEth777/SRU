@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script language = "Javascript" type = "text/Javascript">
+        /* Abstraction - Hiding the information
+        showing the essential part and Hinding the Implementation Details */
+        //Demonstrate Abstraction Using Function
+        function college(name,branch,fee) {
+            this.name = name;
+            this.branch = branch;
+            this.fee = fee;
+            this.nextYearIncrease = 20000;
+            this.getCollegeDetails = function(){
+                document.write("College name is :"+this.name + "<br/>");
+                document.write("My branch is :"+this.branch + "<br/>");
+                document.write("My College Fee is :"+this.fee + "<br/>");
+            }
+            this.getNextYearFee = function(){
+                document.write("Next Year Fee is :"+(this.fee + this.nextYearIncrease) + "<br/>");
+            }
+        }
+        var clge = new college("SRU","CSE",230000);
+        clge.getCollegeDetails();
+        clge.nextYearIncrease = -50000;
+        clge.getNextYearFee();
+
+
+        /* Demonstrate Abstraction using class and object*/
+        class car{
+            constructor(name,color,price){
+                this.name = name;
+                this.color = color;
+                this.price = price;
+                this.nextYearIncrease = 80000;
+                this.getCarDetails = function(){
+                    document.write("Car name is :" + this.name + "<br/>");
+                    document.write("Color of the car is :" + this.color + "<br/>");
+                    document.write("Price of the car is :" + this.price + "<br/>");
+                }
+                this.getNextYearPrice = function(){
+                    document.write("Next year price of car is :"+(this.price + this.nextYearIncrease) + "<br/>");
+                }
+            }
+        }
+        var car1 = new car("Ferari","Black",5000000);
+        car1.getCarDetails();
+        car1.nextYearIncrease = -30000;
+        car1.getNextYearPrice();
+    </script>
+</body>
+</html>

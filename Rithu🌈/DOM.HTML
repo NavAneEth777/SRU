@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Objects</title>
+</head>
+<body>
+    <!--Four Types of Document Objects
+    1.document.getElementById()
+    2.document.getElementByName()
+    3.document.getElementByClassName()
+    4.document.getElementByTagName()-->
+    <p id="demo">SRU</p>
+    <script language="Javascript" type="text/Javascript">
+        document.getElementById("demo").innerHTML = "OOPJS";
+    </script>
+    <!--Event-->
+    <p id="p2">p2</p>
+    <button onClick = "document.getElementById('p2').innerHTML = alert('Rithika')">Click Here</button>
+
+    <p id="p3">p3</p>
+    <label for="name" id="name">Name:</label>
+    <input type="text" id=" name">
+    <button on click = "document.getElementById('p3').innerHTML = alert('Saivarsha')" >Submit</button>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling in JavaScript</title>
+</head>
+<body>
+    <script language="JavaScript" type="text/JavaScript">
+        /*Exception is an Abnormal or Unusual Errror
+        We cant Expect this type of Errors
+        Error : It is a bug which stops the excecutiomof a program
+        3 Types of errors
+        1.syntax Error
+        2.Logical Error /Compile Error/Semantic Error
+        3.Exception /Runtime Errors
+
+        1.Syntax Errors-if we dont Follow the program rules we will get syntax error*/
+        //Example
+        /*var a = prompt("Enter a number:");
+        fi(a>0)
+        {
+            console.log("A is greater than zero")
+        }
+        else{
+            console.log("A is less than zero");
+        }
+
+        /* 2.Logical error/Semantic error/compile time Error
+        var n = prompt("Enter a number:");
+        var i = 1;
+        while(n>0) 
+        {
+            console.log(n + "<br/>");
+            i++;
+        }
+        */
+       // 3.Runtime Error/Exception Error
+       /*var a = prompt("Enter a value:");
+       var b = prompt("Enter a value:");
+       var c = a/b;
+       document.write(c);
+
+       /*Exception handling Techniques
+       try - Logic / code Should be written in this block
+       catch() - It Handles the errors
+       finally - Regardless of try and catch finally always executes 
+       throw - user can write erorr Statements
+       Syntax of try:
+       try{
+        Statements;
+        Logic/Code;
+       }
+       Syntax of catch():
+       catch(error){
+        Statements;
+        handles the errors;
+       }
+       Syntax of finally:
+       finally{
+        It always Executes
+       }
+       Syntax of throw:
+       throw("User defined error statement"); */
+       /*try{
+        var a = prompt("Enter a value:");
+        var b = prompt("Enter b value:");
+        var c = a/b;
+       }
+       catch(err){
+        document.write(err);
+       }
+       finally{
+        document.write("Sr university");
+       }*/
+       //Example of throw
+       /*try{
+        var a = prompt("Enter a value:");
+        var b = prompt("Enter b value:");
+        if(b==0){
+            //throw("Zero division Error");
+            throw new Error("value b should not be Zero");
+        }
+        else{
+            c = a/b;
+            document.write(c);
+        }
+       }
+       catch(err){
+        document.write(err);
+       }
+       finally{
+        document.write("Sr University");
+       }*/
+       //Array Index Out of Bound Error
+       /*try{
+        var a = new Array();
+        var b = prompt('Enter no.of elements:');
+        for(i=0;i<b;i++){
+            var c = prompt("Enter elements:");
+            a.push(c);
+        }
+        document.write(a[b]);
+        throw("Indexoutofbound");
+       }
+       catch(c){
+        alert(e);
+       }
+       finally{
+        document.write(a);
+       }*/
+       //Function Error
+       try{
+        add();
+       }
+       catch(err){
+        document.write(err);
+       }
+       finally{
+        alert("Handling error");
+       }
+
+       
+    </script>
+</body>
+</html>

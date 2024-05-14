@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Methods</title>
+    <script language="Javascript" type="text/Javascript">
+        /*Event Handling Methods
+        1.onClick()
+        2.onLoad()
+        3.onChange()
+        4.onMouseOver()
+        5.onMouseOut()
+        6.onKeyPress()
+        7.onKeyUp()
+        8.onKeyDown()*/
+        //onLoad()Event
+        function welcome()
+        {
+            alert("Welcome to Javascript programming Language");
+        }
+
+        //onClick()Event
+        function message(){
+            document.getElementById("p1").innerHTML = "Welcome to SR University";
+        }
+
+        //onChange()Event
+        function course(){
+            var c = document.getElementById("course").value;
+            document.getElementById("p2").innerHTML = "Your selected course : "+c;
+        }
+
+        //Key Press()Event
+        function k_press()
+        {
+            alert("Your OOPJS class is postponed");
+            document.getElementById("p4").innerHTML = "Your OOPJS class is postponed";
+        }
+        //Key up()Event
+        function up_press()
+        {
+            var u = document.getElementById("txt2");
+            u.value = u.value.toUpperCase();
+        }
+        //KEyDown()Event
+        function down_press()
+        {
+            var d = document.getElementById("txt3");
+            d.value = d.value.toLowerCase();
+        }
+    </script>
+</head>
+<body onLoad="welcome()">
+    <p id="p1"></p>
+    <button onclick="message()">Click Here</button><br/>
+    <p id="p2"></p>
+    <select name="course" id="course" onchange="course()">
+    <option value="cse">CSE</option>
+    <option value="eee">EEE</option>
+    <option value="ece">ECE</option>
+    <option value="me">ME</option>
+    <option value="ce">CE</option>
+    </select>
+
+    <!--Mouse Events-->
+    <p id="p3">SRU</p>
+    <h1 onmouseover="document.getElementById('p3').innerHTML = 'Welcome to SR University'">Message1</h1>
+    <h1 onmouseover="document.getElementById('p3').innerHTML = 'Welcome to OOPJS'">Message2</h1>
+
+    <!--Key Events-->
+    <p id="p4"></p>
+    First Name: <input type="text" id="txt1" onkeypress="k_press()">
+    Last Name: <input type="text" id="txt2" onkeyUp="up_press()">
+    Middle Name: <input type="text" id="txt3" onkeyDown="down_press()">
+    
+</body>
+</html>

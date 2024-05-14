@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDATIONS IN JAVASCRIPT</title>
+    <script language="Javascript" type="text/Javascript">
+        function validate(){
+            var uname = document.getElementById("txt1").value;
+            var pwd = document.getElementById("pswd1").value;
+            //alert(uname + pwd);
+            if((uname.length==0)&&(pswd.length==0)){
+                document.getElementById('p1').innerHtml = "Enter Username & Password:";
+                
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form action="" id="f1">
+        <font color="red"><p id="p1"></p></font>
+        User ID: <input type="text" id="txt1"><br/>
+        Password: <input type="password" id="pswd1"><br/>
+        <input type="submit" onclick="validate()">
+    </form>
+</body>
+</html>

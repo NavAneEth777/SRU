@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        /*Poly means - Many
+        Morphism means - forms
+        same thing doing in different ways*/
+        class shape
+        {
+            draw(){
+                return "Iam a Generic Shape";	
+            }
+        }
+        class square extends shape
+        {
+            draw(){
+                return "Iam a Square";	
+            }
+        }
+        class circle extends shape
+        {
+            draw(){
+                return "Iam a circle";	
+            }
+        }
+        //Creating an Object for student class
+        var s = new shape();
+        document.write(s.draw()+"<br/>");
+        var s = new square();
+        document.write(s.draw()+"<br/>");
+        var s = new circle();
+        document.write(s.draw()+"<br/>");
+
+
+        /*Two Types:
+        1. Overloading - Operator Overloading, Method Overloading
+        2. Overriding - can be achived using Inheritance*/
+        //1. Overloading - Operator Overloading, Method Overloading
+        class addition
+        {
+            add(x=10,y=20){
+                return x+y;	
+            }
+        }
+        //Creating an Object for addition class
+        var a = new addition();
+        document.write(a.add()+"<br/>");
+        document.write(a.add("SRU","SRIT")+"<br/>");
+        document.write(a.add("SRU")+"<br/>");
+
+        // 2. Overriding - can be achived using Inheritance
+        class shape
+        {
+            draw(){
+                return "Iam a Generic Shape";	
+            }
+        }
+        class square extends shape
+        {
+            draw(){
+                return "Iam a Square";	
+            }
+        }
+        class circle extends shape
+        {
+            draw(){
+                return "Iam a circle";	
+            }
+        }
+        //Creating an Object for shape class
+        var s = new shape();
+        document.write(s.draw()+"<br/>");
+        var s = new square();
+        document.write(s.draw()+"<br/>");
+        var s = new circle();
+        document.write(s.draw()+"<br/>");
+    </script>
+</body>
+</html>

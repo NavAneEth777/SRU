@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS IN JAVASCRIPT</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        /*2 Types of Objects in javascript
+        1.Built-in Objects
+        2.User-defined Objects
+        //2 User-defined Objects*/
+        // var student = {
+        //     name:"SRU",
+        //     rollno:1234,
+        //     subject:"OOPJS"
+        // };
+        // document.write(student.name + student.rollno + student.subject + "<br/>");
+
+        // //Creating Object with Keyword new
+        // var person = new Object();
+        // person.name = "SRU";
+        // person.age = 18;
+        // person.marks = 20;
+        // person.subject = "OOPJS";
+        // document.write(person.name + " " + person.age + " " + person.marks + " " + person.subject +"<br/>" );
+
+
+        // 1.BUILT-IN OBJECTS
+        /* 1.Number()
+           2.String
+           3.Boolean
+           4.Date
+           5.Math
+           6.Array
+           7.Object
+           8.All Function are Objects
+           9.Regular Expression */
+           // 1.Number
+        //    var a = 10;
+        //    document.write(a + "<br/>");
+        //    var num = new Number();
+        //    num = 2.5;
+        //    document.write(num + "<br/>");
+
+        //    //2.Boolean
+        //    var b = true;
+        //    document.write(typeof(b)+"<br/>");
+        //    var bol = new Boolean(false);
+        //    document.write(typeof(bol)+"<br/>");
+        //    var bool = new Boolean(10>9);
+        //    document.write(bool+"<br/>");
+
+        //    //3.String
+        //    var str1 = "OOpjs";
+           var str2 = new String("sr University");
+        //    document.write(str1 + "<br/>");
+           document.write(str2 + "<br/>");
+
+        //    //String Methods / String Handling Functions / String Manipulation Objects
+        //    //length
+        //    var str1 = "OOpjs";
+        //    var str2 = new String("sr University");
+        //    document.write(srt2.length + "<br/>");
+        //    document.write(str2.fontsize(5)+ "<br/>");
+        //    document.write(str2.fontcolor("green") + "<br/>");
+        //    document.write(str2.toLowerCase() + "<br/>");
+        //    document.write(str2.toUpperCase() + "<br/>");
+        //    document.write(str2.charAt(9)+"<br/>");
+        //    document.write(str2.charCodeAt(0)+"<br/>");
+        //    document.write(str2.replace("S","SRIT")+"<br/>");
+              
+              
+              //Program for Design
+              n = prompt("Enter a number:");
+              var d = 65;
+              for(i=1;i<=n;i++){
+                for(j=1;j<=n;j++) {
+                    document.write(String().charCodeAt(d)+" ");
+                    d=d+1;
+                }
+                document.write("br/>");
+              };          
+              document.write(String.fromCharCode(65)+ "<br/>");
+              document.write(str2.link("http:\\sru.edu.in" +"<br/>"));
+             
+              var fruits = new Array();
+              fruits=["apple","banana","kiwi"];
+              document.write(fruits + "<br/>");
+              //Adding elements
+              document.write(fruits.push("Orange")+"<br/>");
+              document.write(fruits + "<br/>");
+              document.write(fruits.length + "<br/>");
+              //unshift()-add elements frst position
+              document.write(fruits.unshift("Cherry")+"<br/>");
+              document.write(fruits + "<br/>");
+              document.write(fruits[0]+"<br/>");
+              document.write(fruits[1]+"<br/>");
+              for(i=0;i<fruits.length;i++){
+                document.write(fruits[i]+ "<br/>")
+              }
+              
+    </script>
+</body>
+</html>

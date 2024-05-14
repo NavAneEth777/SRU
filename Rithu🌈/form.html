@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling in Javascript</title>
+    <script language="Javascript" type="text/Javascript">
+        //Event handling methods
+        /* 1.Onclick()
+        2.onChnage()
+        3.onMouseOver()
+        4.onMouseOut()
+        5.onLoad()
+        6.onKeyUp()
+        7.onKeyDown()*/
+        function details()
+        {
+            //alert("Hello!!");
+            var fname=document.getElementById("fn").value;
+            var lname=document.getElementById("ln").value;
+            var sub=document.getElementById("sub").value;
+            alert(fname+" " +lname+ " "+sub);
+            //getElementsByName()
+            var names=document.getElementByName("name1");
+            for(i=0;i<names.length;i++){
+                alert(names[i].value);
+            }
+            //getElementsByClassName()
+            var c_names = document.getElementsByClassName("name");
+            for(i=0;i<c_names.length;i++){
+                alert(c_names[i].value);
+                alert(c_names[i].name);
+                alert(c_names[i].tagName);
+            }
+            //getElementsByTagName()
+            var t_names=document.getElementsByTagName("li");
+            for(i=0;i<t_names.length;i++){
+                alert(t_names[i].innerHTML);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="" style="border:2px solid black">
+        <label for="fname">FirstName</label>
+        <input type="text" id="fn" name="fname" class="fname"><br/>
+        <label for="lname">LastName</label>
+        <input type="text" id="ln" name="lname" class="lname"><br/>
+        <label for="sub">Subject</label>
+        <input type="text" id="sub" name="sub" class="sub"><br/>
+        <label for="course">CourseName:</label><br/>
+        <ul>
+            <li>CSE</li>
+            <li>ECE</li>
+            <li>EEE</li>
+        </ul>
+        <button type="submit" onclick="details()">Submit</button>
+        <button>Reset</button>
+    </form>
+</body>
+</html>

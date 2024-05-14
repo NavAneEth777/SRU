@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmatic Operation .HTML</title>
+    <script language="Javascript" type="text/Javascript">
+        function add()
+        {
+            var val1=(document.getElementById("val1")).value;  
+            var val2=(document.getElementById("val2")).value;
+            var val3=parseInt(val1)+parseInt(val2);
+            alert(val3);
+        }
+        function subtraction()
+        {
+            const val1=document.getElementById("val1").value;  
+            const val2=document.getElementById("val2").value;
+            alert(val1 - val2);
+        }
+        function multiplication()
+        {
+            const val1=document.getElementById("val1").value;  
+            const val2=document.getElementById("val2").value;
+            alert(val1 * val2);
+        }
+        function division()
+        {
+            const val1=document.getElementById("val1").value;  
+            const val2=document.getElementById("val2").value;
+            alert(val1 % val2);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="val1">Value1:</label>
+        <input type="text" id="val1"><br/>
+        <label for="val2">Value2:</label>
+        <input type="text" id="val2"><br/>
+        <button type="add"onclick="add()" >Add</button>
+        <button type="sub"onclick="subtraction()" >Sub</button>
+        <button type="mul"onclick="multiplication()" >Mul</button>
+        <button type="div"onclick="division()" >Div</button>
+    </form>
+</body>
+</html>

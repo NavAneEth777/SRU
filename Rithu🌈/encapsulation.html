@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCAPSULATION IN JS</title>
+</head>
+<body>
+    <script language="Javascript" type="text/Javascript">
+        /*Encapsulation 
+        wrapping/Binding the data into single unit
+        -getter
+        -setter
+        */
+        class student{
+            constructor(){
+                var name;
+                // var rollno;
+                // var subject;
+            }
+            getName(name){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+        }
+        var s = new student();
+        s.setName("Rithika");
+        document.write(s.getName() +"<br/>");
+        
+        class student1{
+            constructor(){
+                var rollno;
+            }
+            getRollno(rollno){
+                return this.rollno;
+            }
+            setRollno(rollno){
+                this.rollno = rollno;
+            }
+        }
+        var s1 = new student1();
+        s1.setRollno(1363);
+        document.write(s1.getRollno() +"<br/>");
+
+        class student2{
+            constructor(){
+                var subject;
+            }
+            getSubject(subject){
+                return this.subject;
+            }
+            setSubject(subject){
+                this.subject = subject;
+            }
+        }
+        var s2 = new student2();
+        s2.setSubject("OOPJS");
+        document.write(s2.getSubject() +"<br/>");
+
+        class parent{
+            constructor(){
+                this.p_name = "wild animal";
+                this.p_type = "Cat"
+            }
+            p_display(){
+                document.write("I am a parent class:"+this.p_name +"<br/>" + this.p_type +"<br/>" );
+            }
+        }
+        class Cat extends parent{
+            constructor(){
+                super();
+                this.c_name = "Cattle";
+                this.c_type = 8
+            }
+            c_display(){
+                document.write("I am a cat class:"+ this.c_name + "<br/>" + this.c_type + "<br/>");
+            }
+        }
+        //Creating an object for cat class
+        var c = new Cat();
+        document.write("Parent class:",c.p_name + "<br/>" + c.p_type + "<br/>");
+        document.write("Child class:",c.c_name +"<br/>" + c.c_type + "<br/>");
+        c.p_display();
+        c.c_display();
+
+        class parent{
+            constructor(){
+                var p_name;
+                var p_year;
+            }
+            getP_Name(){
+                return this.p_name;
+            }
+            setP_Name(p_name){
+                this.p_name;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
